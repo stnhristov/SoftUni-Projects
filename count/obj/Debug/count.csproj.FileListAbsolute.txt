@@ -1,0 +1,6 @@
+c:\users\stanislav\documents\visual studio 2013\Projects\cadvanced\count\bin\Debug\count.exe.config
+c:\users\stanislav\documents\visual studio 2013\Projects\cadvanced\count\bin\Debug\count.exe
+c:\users\stanislav\documents\visual studio 2013\Projects\cadvanced\count\bin\Debug\count.pdb
+c:\users\stanislav\documents\visual studio 2013\Projects\cadvanced\count\obj\Debug\count.exe
+c:\users\stanislav\documents\visual studio 2013\Projects\cadvanced\count\obj\Debug\count.pdb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\cadvanced\count\obj\Debug\count.csprojResolveAssemblyReference.cache
