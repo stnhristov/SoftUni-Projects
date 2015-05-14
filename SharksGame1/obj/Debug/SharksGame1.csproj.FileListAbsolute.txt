@@ -1,0 +1,6 @@
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\SharksGame1\SharksGame1\bin\Debug\SharksGame1.exe.config
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\SharksGame1\SharksGame1\bin\Debug\SharksGame1.exe
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\SharksGame1\SharksGame1\bin\Debug\SharksGame1.pdb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\SharksGame1\SharksGame1\obj\Debug\SharksGame1.csprojResolveAssemblyReference.cache
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\SharksGame1\SharksGame1\obj\Debug\SharksGame1.exe
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\SharksGame1\SharksGame1\obj\Debug\SharksGame1.pdb
