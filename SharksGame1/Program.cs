@@ -43,6 +43,20 @@ namespace SharksGame1
                         }
                         else if (MenuBarKeys == 1) 
                         {
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("Use arrow keys to control SHARK.");
+                            System.Threading.Thread.Sleep(600);
+                            Console.WriteLine("Don't let the scary rocks hit you.");
+                            System.Threading.Thread.Sleep(600);
+                            Console.WriteLine("They're standing still anyway.");
+                            System.Threading.Thread.Sleep(600);
+                            Console.WriteLine("Eat some nasty people that get in your way and you might get a second life");
+                            System.Threading.Thread.Sleep(600);
+                            Console.WriteLine("Or third...");
+                            System.Threading.Thread.Sleep(600);
+                            Console.WriteLine("Have a nice game experience!!!");
+                            System.Threading.Thread.Sleep(3000);
  
                         }
                         else if (MenuBarKeys == 2) 
@@ -75,7 +89,8 @@ namespace SharksGame1
             int modMovement = 0;
             int x = 0;
             int y = 5;
-            while (true)
+            bool gameplay = true;
+            while (gameplay)
             {
                 if (Console.KeyAvailable)
                 {
@@ -96,6 +111,19 @@ namespace SharksGame1
                     {
                         modMovement = 3;
                     }
+                    if (keyInfo.Key == ConsoleKey.Escape) 
+                    {
+                        Environment.Exit(0);
+                    }
+                    if (keyInfo.Key == ConsoleKey.Enter) 
+                    {
+                        gameplay = false;
+                        Console.ReadKey();
+                        if (keyInfo.Key == ConsoleKey.Enter) 
+                        {
+                            gameplay = true;
+                        }
+                    }
                 }
                 while (Console.KeyAvailable)
                 {
@@ -103,7 +131,7 @@ namespace SharksGame1
                 }
                 if (modMovement == 0)
                 {
-                    if (x == 42)
+                    if (x == 62)
                     {
                         x = 0;
                     }
@@ -121,7 +149,7 @@ namespace SharksGame1
                 {
                     if (x == 0)
                     {
-                        x = 42;
+                        x = 62;
                     }
                     Console.SetCursorPosition(x, y);
                     for (int i = sharkL.Length - 1; i >= 0; i--)
@@ -171,6 +199,7 @@ namespace SharksGame1
                 System.Threading.Thread.Sleep(80);
                 Console.Clear();
             }
+            
         }
         static void PrintPlayField() 
         {
@@ -183,16 +212,16 @@ namespace SharksGame1
             for (int i = 0; i < 25; i++)
             {
                 Console.ForegroundColor = ConsoleColor.Black;
-                Console.SetCursorPosition(50, i);
+                Console.SetCursorPosition(70, i);
                 Console.Write('■');
             }
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 70; i++)
             {
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.SetCursorPosition(i, 0);
                 Console.Write('■');
             }
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 70; i++)
             {
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.SetCursorPosition(i, 24);
