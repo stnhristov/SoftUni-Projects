@@ -60,6 +60,144 @@ namespace SharksGame1
               mod++;
               Console.Clear();
             }
+            Console.CursorVisible = false;
+            string sharkRight = ">-==^=:>";
+            string sharkLeft = "<-==^=:<";
+            char[] sharkR = sharkRight.ToCharArray();
+            char[] sharkL = sharkLeft.ToCharArray();
+            string sharkDown = "V#>\"V";
+            string sharkUp = "^#<\"^";
+            char[] sharkD = sharkDown.ToCharArray();
+            char[] sharkU = sharkUp.ToCharArray();
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.White;
+
+            int modMovement = 0;
+            int x = 0;
+            int y = 5;
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo keyInfo = Console.ReadKey();
+                    if (keyInfo.Key == ConsoleKey.RightArrow)
+                    {
+                        modMovement = 0;
+                    }
+                    if (keyInfo.Key == ConsoleKey.LeftArrow)
+                    {
+                        modMovement = 1;
+                    }
+                    if (keyInfo.Key == ConsoleKey.UpArrow)
+                    {
+                        modMovement = 2;
+                    }
+                    if (keyInfo.Key == ConsoleKey.DownArrow)
+                    {
+                        modMovement = 3;
+                    }
+                }
+                while (Console.KeyAvailable)
+                {
+                    Console.ReadKey(true);
+                }
+                if (modMovement == 0)
+                {
+                    if (x == 42)
+                    {
+                        x = 0;
+                    }
+                    Console.SetCursorPosition(x, y);
+                    for (int i = 0; i < sharkR.Length; i++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write(sharkR[i]);
+
+                    }
+                    x++;
+
+                }
+                if (modMovement == 1)
+                {
+                    if (x == 0)
+                    {
+                        x = 42;
+                    }
+                    Console.SetCursorPosition(x, y);
+                    for (int i = sharkL.Length - 1; i >= 0; i--)
+                    {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write(sharkL[i]);
+                    }
+                    x--;
+                }
+                if (modMovement == 2)
+                {
+
+                    Console.SetCursorPosition(x, y);
+                    for (int i = 0; i < sharkU.Length; i++)
+                    {
+                        if (y == 1)
+                        {
+                            y = Console.WindowHeight - 4;
+                        }
+                        y--;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write(sharkU[i]);
+                        Console.SetCursorPosition(x, y);
+
+                    }
+                    y = y + 4;
+                }
+                if (modMovement == 3)
+                {
+                    Console.SetCursorPosition(x, y);
+                    for (int i = 0; i < sharkD.Length; i++)
+                    {
+                        if (y == Console.WindowHeight - 2)
+                        {
+                            y = 4;
+                        }
+                        y++;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write(sharkD[i]);
+                        Console.SetCursorPosition(x, y);
+
+                    }
+                    y = y - 4;
+
+                }
+                PrintPlayField();
+                System.Threading.Thread.Sleep(80);
+                Console.Clear();
+            }
+        }
+        static void PrintPlayField() 
+        {
+            for (int i = 0; i < 25; i++) 
+            {
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.SetCursorPosition(0, i);
+                Console.Write('■');
+            }
+            for (int i = 0; i < 25; i++)
+            {
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.SetCursorPosition(50, i);
+                Console.Write('■');
+            }
+            for (int i = 0; i < 50; i++)
+            {
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.SetCursorPosition(i, 0);
+                Console.Write('■');
+            }
+            for (int i = 0; i < 50; i++)
+            {
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.SetCursorPosition(i, 24);
+                Console.Write('■');
+            }
         }
         static void PrintOnPosition(int x, int y, string s, ConsoleColor color) 
         {
@@ -118,31 +256,31 @@ namespace SharksGame1
                 Console.Write("==START==");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.SetCursorPosition(43, 8);
-                Console.Write("==INFO==");
+                Console.Write("==INFO===");
                 Console.SetCursorPosition(43, 10);
-                Console.Write("==END==");
+                Console.Write("==END====");
             }
             else if (modulation == 1) 
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.SetCursorPosition(43, 8);
-                Console.Write("==INFO==");
+                Console.Write("==INFO===");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.SetCursorPosition(43, 6);
                 Console.Write("==START==");
                 Console.SetCursorPosition(43, 10);
-                Console.Write("==END==");
+                Console.Write("==END====");
             }
             else if (modulation == 2) 
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.SetCursorPosition(43, 10);
-                Console.Write("==END==");
+                Console.Write("==END====");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.SetCursorPosition(43, 6);
                 Console.Write("==START==");
                 Console.SetCursorPosition(43, 8);
-                Console.Write("==INFO==");
+                Console.Write("==INFO===");
             }
                  
         }
