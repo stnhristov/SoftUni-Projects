@@ -1,24 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace SharkGame
 {
     class Drawer
     {
 // Public fields
+        struct Point
+        {
+            public int X;
+            public int Y;
+        }
+        public static bool gameplay = true;
         public static List<FoodAndRocks> Food = new List<FoodAndRocks>();
         public static List<FoodAndRocks> Rocks = new List<FoodAndRocks>();
         public static int PlayfieldWidth = 69;
         public static int PlayfieldHight = 24;
-
+        public static int Score = 0;
+        public static FoodAndRocks newFood;
+        public static bool Hitted = false;
+        public static FoodAndRocks rock = new FoodAndRocks(0, 0, "A", ConsoleColor.Gray);
         public static void Draw()
         {
-// Declarations
-            int score = 0;
+// Declarations           
             Random randomGenerator = new Random();
             Console.CursorVisible = false;
             string sharkRight = ">-==^=:>";
@@ -36,11 +41,12 @@ namespace SharkGame
             int modMovement = 0;
             int x = 0;
             int y = 5;
-            bool gameplay = true;
+
 
             while (gameplay)
             {
-                // change movement direction
+
+            // change movement direction
                 if (Console.KeyAvailable)
                 {
                     modMovement = ChooseModMovement(modMovement, ref gameplay);
@@ -52,114 +58,158 @@ namespace SharkGame
 
                 Console.Clear();
 
-                // recalculate X and Y as per chosen movement direction and drow Shark
+// Draw Shark !!
+                int x1 = x;
                 if (modMovement == 0)
                 {
-                    x = Mode10SharkDrawer(x, y, sharkR);
+                    x1 = Mode0XSharkDrawer(x1, y, sharkR);
                 }
                 if (modMovement == 1)
                 {
-                    x = Mode1XSharkDrawer(x, y, sharkL);
+                    // the Shark's nose also detects the hits
+                    x1 = Mode1XSharkDrawerAndHitsDetector(x1, y, sharkL);
                 }
                 if (modMovement == 2)
                 {
-                    y = Mode2YSharkDrawer(x, y, sharkU);
+                    y = Mode2YSharkDrawer(x1, y, sharkU);
                 }
                 if (modMovement == 3)
                 {
-                    y = Mode3YSharkDrawer(x, y, sharkD);
+                    y = Mode3YSharkDrawer(x1, y, sharkD);
                 }
+                x = x1;
 
-                // generating food and rocks and tracking hits
-                bool hitted = false;
+                // generate food and rocks and track hits
+                Hitted = false;
                 {
-                    // chance generator
-                    int chance = randomGenerator.Next(0, 100);
-
-                    // generate rocks
-                    if (chance <= 2 || chance > 45 && chance <= 47 || chance > 65 && chance <= 67)
-                    {
-                        GenerateNewRocks(randomGenerator, PlayfieldWidth, PlayfieldHight);
-                    }
-
-                    // generate food
-                    else if (chance > 15 && chance <= 17)
-                    {
-                        GenerateNewFood(randomGenerator, PlayfieldHight, "*");
-                    }
-
-                    else if (chance > 30 && chance <= 32)
-                    {
-                        GenerateNewFood(randomGenerator, PlayfieldHight, "+");
-                    }
-
-                    else if (chance > 60 && chance <= 62)
-                    {
-                        GenerateNewFood(randomGenerator, PlayfieldHight, "@");
-                    }
+                    ChanceGenerator(randomGenerator);
                 }
 
                 // adds new food 
                 GenerateNewFoodList(PlayfieldWidth);
 
-// Main Drawer - print food, rocks and playfield are Drawer methods main part - the rest is just settings
+// Details Drawer - print food, rocks and playfield are Drawer methods main part - the rest is just settings
+
+                // draw bottom up frames, and score
+                DrawFrameworkTopAndBottom();
+                PrintOnPosition(75, 6, "Score: " + Score, ConsoleColor.White);
+
+                // draw rocks and food
                 foreach (FoodAndRocks item in Food)
                 {
                     PrintOnPosition(item.X, item.Y, item.S, item.color);
+
                 }
                 foreach (FoodAndRocks rock in Rocks)
                 {
                     PrintOnPosition(rock.X, rock.Y, rock.S, rock.color);
+
                 }
 
-                for (int i = 0; i < 25; i++)
-                {
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.SetCursorPosition(0, i);
-                    Console.Write('■');
-                }
-                for (int i = 0; i < 25; i++)
-                {
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.SetCursorPosition(70, i);
-                    Console.Write('■');
-                }
-                for (int i = 0; i < 70; i++)
-                {
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.SetCursorPosition(i, 0);
-                    Console.Write('■');
-                }
-                for (int i = 0; i < 70; i++)
-                {
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.SetCursorPosition(i, 24);
-                    Console.Write('■');
-                }
+                // draw the rest of the playfieldplayfiled - using foreach instead of a for loop reduces the framwork trembling
+                List<Point> left = new List<Point>();
+                List<Point> right = new List<Point>();
+                CalculateFrameworkLeftSide(left);
+                CalculateFrameworkRightSide(right);      
+        
+                PrintFrameworkLeftRight(left, right);
 
                 Thread.Sleep(80);
             }
+
+            // if gameplay = false -> end game
+            PrintOnPosition(75, 10, "GAME OVER!!!", ConsoleColor.White);
+            Console.ForegroundColor = ConsoleColor.White;
+            PrintOnPosition(25, 26, "Press [enter]to exit", ConsoleColor.White);
+            Console.ReadLine();
+            Environment.Exit(0);
+        }
+
+        private static void ChanceGenerator(Random randomGenerator)
+        {
+// chance generator
+            int chance = randomGenerator.Next(0, 100);
+
+            // generate rocks
+            if (chance <= 2 || chance > 45 && chance <= 47 || chance > 65 && chance <= 67)
+            {
+                GenerateNewRocks(randomGenerator, PlayfieldWidth, PlayfieldHight);
+            }
+
+            else if (chance > 20 && chance <= 62)
+            {
+                GenerateNewFood(randomGenerator, PlayfieldHight, "@");
+            }
+        }
+
+        private static void PrintFrameworkLeftRight(List<Point> left, List<Point> right)
+        {
+            foreach (var point in left)
+            {
+                PrintFrameworkSides(point);
+            }
+
+            foreach (var point in right)
+            {
+                PrintFrameworkSides(point);
+            }
+        }
+
+        private static void CalculateFrameworkLeftSide(List<Point> left)
+        {
+            for (int i = 0; i < 25; i++)
+            {
+                Point a = new Point();
+                a.X = 0;
+                a.Y = i;
+                left.Add(a);
+            }
+        }
+
+        private static void CalculateFrameworkRightSide(List<Point> right)
+        {
+            for (int i = 0; i < 25; i++)
+            {
+                Point a = new Point();
+                a.X = 70;
+                a.Y = i;
+                right.Add(a);
+            }
+        }
+
+        private static void DrawFrameworkTopAndBottom()
+        {
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.SetCursorPosition(0, 0);
+            Console.WriteLine(new string('■', 70));
+            Console.SetCursorPosition(0, 24);
+            Console.WriteLine(new string('■', 70));
+        }
+
+        private static void PrintFrameworkSides(Point point)
+        {
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.SetCursorPosition(point.X, point.Y);
+            Console.Write('■');
         }
 
         private static void GenerateNewFood(Random randomGenerator, int playfieldHight, string foodType)
         {
-            FoodAndRocks newFood = new FoodAndRocks(0, randomGenerator.Next(0, playfieldHight), foodType, ConsoleColor.Red);
+            newFood = new FoodAndRocks(0, randomGenerator.Next(2, playfieldHight-2), foodType, ConsoleColor.Red);
 
             if (Food.Count < 6)
             {
                 Food.Add(newFood);
             }
-            else if (Food.Count > 3)
-            {
-                Food.Add(newFood);
-                Food.RemoveAt(0);
-            }
+
+            Score++;
         }
 
         private static void GenerateNewRocks(Random randomGenerator, int playfieldWidth, int playfieldHight)
         {
-            FoodAndRocks rock = new FoodAndRocks(randomGenerator.Next(0, playfieldWidth),
-                randomGenerator.Next(0, playfieldHight), "A", ConsoleColor.Gray);
+            rock = new FoodAndRocks(randomGenerator.Next(2, playfieldWidth-2),
+                randomGenerator.Next(2, playfieldHight-2), "A", ConsoleColor.Gray);
+            
             if (Rocks.Count < 6)
             {
                 Rocks.Add(rock);
@@ -178,7 +228,7 @@ namespace SharkGame
                     newFood.X = oldFood.X + 1;
                 }
 
-                if (newFood.X < playfieldWidth && newList.Count < 6)
+                if (newFood.X < playfieldWidth && newList.Count < 20)
                 {
                     newList.Add(newFood);
                 }
@@ -189,6 +239,7 @@ namespace SharkGame
         private static int Mode3YSharkDrawer(int x, int y, char[] sharkD)
         {
             Console.SetCursorPosition(x, y);
+
             for (int i = 0; i < sharkD.Length; i++)
             {
                 if (y == PlayfieldHight - 2)
@@ -196,11 +247,14 @@ namespace SharkGame
                     y = 4;
                 }
                 y++;
+
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write(sharkD[i]);
                 Console.SetCursorPosition(x, y);
+
             }
             y = y - 4;
+
             return y;
         }
 
@@ -222,7 +276,7 @@ namespace SharkGame
             return y;
         }
 
-        private static int Mode1XSharkDrawer(int x, int y, char[] sharkL)
+        private static int Mode1XSharkDrawerAndHitsDetector(int x, int y, char[] sharkL)
         {
             if (x == 0)
             {
@@ -234,11 +288,31 @@ namespace SharkGame
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write(sharkL[i]);
             }
+            HitsDetector(x, y);
             x--;
             return x;
         }
 
-        private static int Mode10SharkDrawer(int x, int y, char[] sharkR)
+        private static void HitsDetector(int x, int y)
+        {
+            for (int i = 0; i < Food.Count; i++)
+            {
+                if ((x == Food[i].X || x == Food[i].X - 1 || x == Food[i].X + 1) && y == Food[i].Y)
+                {
+                    Hitted = true;
+                    Score += 40000;
+                }
+            }
+            for (int j = 0; j < Rocks.Count; j++)
+            {
+                if ((x == Rocks[j].X || x == Rocks[j].X - 1 || x == Rocks[j].X + 1) && y == Rocks[j].Y)
+                {
+                    gameplay = false;
+                }
+            }
+        }
+
+        private static int Mode0XSharkDrawer(int x, int y, char[] sharkR)
         {
             if (x == 62)
             {
@@ -251,6 +325,7 @@ namespace SharkGame
                 Console.Write(sharkR[i]);
             }
             x++;
+
             return x;
         }
 
