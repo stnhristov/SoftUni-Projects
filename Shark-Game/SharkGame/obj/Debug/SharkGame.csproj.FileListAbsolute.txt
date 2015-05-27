@@ -1,0 +1,6 @@
+c:\users\katya\documents\visual studio 2013\Projects\Shark-Game\SharkGame\bin\Debug\SharkGame.exe.config
+c:\users\katya\documents\visual studio 2013\Projects\Shark-Game\SharkGame\bin\Debug\SharkGame.exe
+c:\users\katya\documents\visual studio 2013\Projects\Shark-Game\SharkGame\bin\Debug\SharkGame.pdb
+c:\users\katya\documents\visual studio 2013\Projects\Shark-Game\SharkGame\obj\Debug\SharkGame.exe
+c:\users\katya\documents\visual studio 2013\Projects\Shark-Game\SharkGame\obj\Debug\SharkGame.pdb
+c:\users\katya\documents\visual studio 2013\Projects\Shark-Game\SharkGame\obj\Debug\SharkGame.csprojResolveAssemblyReference.cache
