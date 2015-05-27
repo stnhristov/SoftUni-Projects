@@ -44,6 +44,7 @@
     <Compile Include="Drawer.cs" />
     <Compile Include="FoodAndRocks.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="Music.cs" />
     <Compile Include="SharkGameMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -121,6 +121,7 @@ namespace SharkGame
             PrintOnPosition(75, 10, "GAME OVER!!!", ConsoleColor.White);
             Console.ForegroundColor = ConsoleColor.White;
             PrintOnPosition(25, 26, "Press [enter]to exit", ConsoleColor.White);
+            Music.Play();
             Console.ReadLine();
             Environment.Exit(0);
         }
@@ -302,6 +303,8 @@ namespace SharkGame
                     Hitted = true;
                     Score += 40000;
                     Food.Remove(Food[i]);
+                    Thread thread = new Thread(Music.Play);
+                    thread.Start();
                 }
             }
             for (int j = 0; j < Rocks.Count; j++)
@@ -322,6 +325,8 @@ namespace SharkGame
                     Hitted = true;
                     Score += 40000;
                     Food.Remove(Food[i]);
+                    Thread thread = new Thread(Music.Play);
+                    thread.Start();
                 }
             }
             for (int j = 0; j < Rocks.Count; j++)
