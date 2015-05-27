@@ -251,10 +251,9 @@ namespace SharkGame
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write(sharkD[i]);
                 Console.SetCursorPosition(x, y);
-
             }
+            HitsDetectorY(x, y);
             y = y - 4;
-
             return y;
         }
 
@@ -272,6 +271,7 @@ namespace SharkGame
                 Console.Write(sharkU[i]);
                 Console.SetCursorPosition(x, y);
             }
+            HitsDetectorY(x, y);
             y = y + 4;
             return y;
         }
@@ -288,12 +288,12 @@ namespace SharkGame
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write(sharkL[i]);
             }
-            HitsDetector(x, y);
+            HitsDetectorX(x, y);
             x--;
             return x;
         }
 
-        private static void HitsDetector(int x, int y)
+        private static void HitsDetectorX(int x, int y)
         {
             for (int i = 0; i < Food.Count; i++)
             {
@@ -301,11 +301,32 @@ namespace SharkGame
                 {
                     Hitted = true;
                     Score += 40000;
+                    Food.Remove(Food[i]);
                 }
             }
             for (int j = 0; j < Rocks.Count; j++)
             {
                 if ((x == Rocks[j].X || x == Rocks[j].X - 1 || x == Rocks[j].X + 1) && y == Rocks[j].Y)
+                {
+                    gameplay = false;
+                }
+            }
+        }
+
+        private static void HitsDetectorY(int x, int y)
+        {
+            for (int i = 0; i < Food.Count; i++)
+            {
+                if ((y == Food[i].Y || y == Food[i].Y - 1 || y == Food[i].Y + 1) && x == Food[i].X)
+                {
+                    Hitted = true;
+                    Score += 40000;
+                    Food.Remove(Food[i]);
+                }
+            }
+            for (int j = 0; j < Rocks.Count; j++)
+            {
+                if ((y == Rocks[j].Y || y == Rocks[j].Y - 1 || y == Rocks[j].Y + 1) && x == Rocks[j].X)
                 {
                     gameplay = false;
                 }
