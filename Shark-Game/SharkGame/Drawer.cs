@@ -71,11 +71,11 @@ namespace SharkGame
                 }
                 if (modMovement == 2)
                 {
-                    y = Mode2YSharkDrawer(x1, y, sharkU);
+                    y = Mode2YSharkDrawerAndHitsDetector(x1, y, sharkU);
                 }
                 if (modMovement == 3)
                 {
-                    y = Mode3YSharkDrawer(x1, y, sharkD);
+                    y = Mode3YSharkDrawerAndHitsDetector(x1, y, sharkD);
                 }
                 x = x1;
 
@@ -237,7 +237,7 @@ namespace SharkGame
             Food = newList;
         }
 
-        private static int Mode3YSharkDrawer(int x, int y, char[] sharkD)
+        private static int Mode3YSharkDrawerAndHitsDetector(int x, int y, char[] sharkD)
         {
             Console.SetCursorPosition(x, y);
 
@@ -258,7 +258,7 @@ namespace SharkGame
             return y;
         }
 
-        private static int Mode2YSharkDrawer(int x, int y, char[] sharkU)
+        private static int Mode2YSharkDrawerAndHitsDetector(int x, int y, char[] sharkU)
         {
             Console.SetCursorPosition(x, y);
             for (int i = 0; i < sharkU.Length; i++)
