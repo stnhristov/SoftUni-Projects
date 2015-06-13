@@ -1,0 +1,10 @@
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\Actual Game Duh\Actual Game Duh\Actual_Game_Duh\bin\x86\Debug\Content\Texture\Tile\Grass.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\Actual Game Duh\Actual Game Duh\Actual_Game_Duh\bin\x86\Debug\Content\Texture\Tile\Road.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\Actual Game Duh\Actual Game Duh\Actual_Game_Duh\bin\x86\Debug\Content\Texture\Tile\Rock.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\Actual Game Duh\Actual Game Duh\Actual_Game_Duh\bin\x86\Debug\Content\Texture\Tile\water.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\Actual Game Duh\Actual Game Duh\Actual_Game_Duh\bin\x86\Debug\Actual_Game_Duh.exe
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\Actual Game Duh\Actual Game Duh\Actual_Game_Duh\bin\x86\Debug\Actual_Game_Duh.pdb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\Actual Game Duh\Actual Game Duh\Actual_Game_Duh\obj\x86\Debug\Actual_Game_Duh.csprojResolveAssemblyReference.cache
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\Actual Game Duh\Actual Game Duh\Actual_Game_Duh\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\Actual Game Duh\Actual Game Duh\Actual_Game_Duh\obj\x86\Debug\Actual_Game_Duh.exe
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\Actual Game Duh\Actual Game Duh\Actual_Game_Duh\obj\x86\Debug\Actual_Game_Duh.pdb

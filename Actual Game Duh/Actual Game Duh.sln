@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actual_Game_Duh", "Actual Game Duh\Actual_Game_Duh\Actual_Game_Duh.csproj", "{B37C47F1-BD1D-4E84-A16A-1B2AD2A981B1}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Actual_Game_DuhContent", "Actual Game Duh\Actual_Game_DuhContent\Actual_Game_DuhContent.contentproj", "{1256A4EA-0F53-4778-9823-F8C7EF2A57F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B37C47F1-BD1D-4E84-A16A-1B2AD2A981B1}.Debug|x86.ActiveCfg = Debug|x86
+		{B37C47F1-BD1D-4E84-A16A-1B2AD2A981B1}.Debug|x86.Build.0 = Debug|x86
+		{B37C47F1-BD1D-4E84-A16A-1B2AD2A981B1}.Release|x86.ActiveCfg = Release|x86
+		{B37C47F1-BD1D-4E84-A16A-1B2AD2A981B1}.Release|x86.Build.0 = Release|x86
+		{1256A4EA-0F53-4778-9823-F8C7EF2A57F6}.Debug|x86.ActiveCfg = Debug|x86
+		{1256A4EA-0F53-4778-9823-F8C7EF2A57F6}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
