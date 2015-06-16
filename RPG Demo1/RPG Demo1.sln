@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPG_Demo1", "RPG Demo1\RPG_Demo1\RPG_Demo1.csproj", "{D9E19E6C-2C7C-44E9-95B4-2B508FB290B1}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "RPG_Demo1Content", "RPG Demo1\RPG_Demo1Content\RPG_Demo1Content.contentproj", "{F7D124FA-D197-4135-97C9-805DCCABFF0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRpgLibrary", "XRpgLibrary\XRpgLibrary.csproj", "{7478D1CB-90F9-4908-952A-8A46A45F621A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpgLibrary", "RpgLibrary\RpgLibrary.csproj", "{DE114D76-C49E-472A-97CD-7542EA015ACE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9E19E6C-2C7C-44E9-95B4-2B508FB290B1}.Debug|x86.ActiveCfg = Debug|x86
+		{D9E19E6C-2C7C-44E9-95B4-2B508FB290B1}.Debug|x86.Build.0 = Debug|x86
+		{D9E19E6C-2C7C-44E9-95B4-2B508FB290B1}.Release|x86.ActiveCfg = Release|x86
+		{D9E19E6C-2C7C-44E9-95B4-2B508FB290B1}.Release|x86.Build.0 = Release|x86
+		{F7D124FA-D197-4135-97C9-805DCCABFF0B}.Debug|x86.ActiveCfg = Debug|x86
+		{F7D124FA-D197-4135-97C9-805DCCABFF0B}.Release|x86.ActiveCfg = Release|x86
+		{7478D1CB-90F9-4908-952A-8A46A45F621A}.Debug|x86.ActiveCfg = Debug|x86
+		{7478D1CB-90F9-4908-952A-8A46A45F621A}.Debug|x86.Build.0 = Debug|x86
+		{7478D1CB-90F9-4908-952A-8A46A45F621A}.Release|x86.ActiveCfg = Release|x86
+		{7478D1CB-90F9-4908-952A-8A46A45F621A}.Release|x86.Build.0 = Release|x86
+		{DE114D76-C49E-472A-97CD-7542EA015ACE}.Debug|x86.ActiveCfg = Debug|x86
+		{DE114D76-C49E-472A-97CD-7542EA015ACE}.Debug|x86.Build.0 = Debug|x86
+		{DE114D76-C49E-472A-97CD-7542EA015ACE}.Release|x86.ActiveCfg = Release|x86
+		{DE114D76-C49E-472A-97CD-7542EA015ACE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
