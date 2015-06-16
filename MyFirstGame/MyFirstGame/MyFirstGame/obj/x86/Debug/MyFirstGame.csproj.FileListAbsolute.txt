@@ -1,0 +1,7 @@
+C:\Users\Katya\Documents\Visual Studio 2013\Projects\MyFirstGame\MyFirstGame\MyFirstGame\bin\x86\Debug\Content\ball.xnb
+C:\Users\Katya\Documents\Visual Studio 2013\Projects\MyFirstGame\MyFirstGame\MyFirstGame\bin\x86\Debug\MyFirstGame.exe
+C:\Users\Katya\Documents\Visual Studio 2013\Projects\MyFirstGame\MyFirstGame\MyFirstGame\bin\x86\Debug\MyFirstGame.pdb
+C:\Users\Katya\Documents\Visual Studio 2013\Projects\MyFirstGame\MyFirstGame\MyFirstGame\obj\x86\Debug\MyFirstGame.csprojResolveAssemblyReference.cache
+C:\Users\Katya\Documents\Visual Studio 2013\Projects\MyFirstGame\MyFirstGame\MyFirstGame\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Katya\Documents\Visual Studio 2013\Projects\MyFirstGame\MyFirstGame\MyFirstGame\obj\x86\Debug\MyFirstGame.exe
+C:\Users\Katya\Documents\Visual Studio 2013\Projects\MyFirstGame\MyFirstGame\MyFirstGame\obj\x86\Debug\MyFirstGame.pdb

@@ -3,4 +3,7 @@ Content\Fonts\ControlFont.xnb
 Content\GUI\StopBar.xnb
 Content\GUI\LeftArrowUp.xnb
 Content\GUI\RightArrowUp.xnb
+<<<<<<< HEAD
 Content\Tilesets\starterTileSet1.xnb
+=======
+>>>>>>> c351f761c38918c84819703b6401f7dd7bbc0bc0

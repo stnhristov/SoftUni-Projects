@@ -46,6 +46,7 @@
       <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\RightArrowUp.xnb</Output>
       <Time>2015-06-16T04:02:11.837308+03:00</Time>
     </Item>
+<<<<<<< HEAD
     <Item>
       <Source>Tilesets\starterTileSet1.png</Source>
       <Name>Tilesets\starterTileSet1</Name>
@@ -55,6 +56,8 @@
       <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\starterTileSet1.xnb</Output>
       <Time>2015-06-16T21:04:48.0532235+03:00</Time>
     </Item>
+=======
+>>>>>>> c351f761c38918c84819703b6401f7dd7bbc0bc0
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F7D124FA-D197-4135-97C9-805DCCABFF0B}</ContentProjectGUID>

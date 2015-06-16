@@ -8,17 +8,23 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 using XRpgLibrary;
+<<<<<<< HEAD
 using XRpgLibrary.TileEngine;
+=======
+>>>>>>> c351f761c38918c84819703b6401f7dd7bbc0bc0
 
 namespace RPG_Demo1.GameScreens
 {
     public class GamePlayScreen:BaseGameState
     {
         #region Field Region
+<<<<<<< HEAD
 
         Engine engine = new Engine(32, 32);
         Tileset tileset;
         TileMap map;
+=======
+>>>>>>> c351f761c38918c84819703b6401f7dd7bbc0bc0
         #endregion
 
         #region Property Region
@@ -40,6 +46,7 @@ namespace RPG_Demo1.GameScreens
         }
         protected override void LoadContent()
         {
+<<<<<<< HEAD
             Texture2D tilesetTexture = Game.Content.Load<Texture2D>("Tilesets/starterTileSet1");
             tileset = new Tileset(tilesetTexture, 8, 8, 32, 32);
 
@@ -53,6 +60,8 @@ namespace RPG_Demo1.GameScreens
                 }
             }
             map = new TileMap(tileset, layer);
+=======
+>>>>>>> c351f761c38918c84819703b6401f7dd7bbc0bc0
             base.LoadContent();
         }
         public override void Update(GameTime gameTime)
@@ -61,6 +70,7 @@ namespace RPG_Demo1.GameScreens
         }
         public override void Draw(GameTime gameTime)
         {
+<<<<<<< HEAD
             GameRef.SpriteBatch.Begin
                 (SpriteSortMode.Immediate,
                 BlendState.AlphaBlend,
@@ -73,6 +83,9 @@ namespace RPG_Demo1.GameScreens
             map.Draw(GameRef.SpriteBatch);
             base.Draw(gameTime);
             GameRef.SpriteBatch.End();
+=======
+            base.Draw(gameTime);
+>>>>>>> c351f761c38918c84819703b6401f7dd7bbc0bc0
         }
 
         #endregion
