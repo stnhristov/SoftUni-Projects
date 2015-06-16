@@ -1,0 +1,6 @@
+c:\users\katya\documents\visual studio 2013\Projects\01. Team\Main\bin\Debug\Main.exe.config
+c:\users\katya\documents\visual studio 2013\Projects\01. Team\Main\bin\Debug\Main.exe
+c:\users\katya\documents\visual studio 2013\Projects\01. Team\Main\bin\Debug\Main.pdb
+c:\users\katya\documents\visual studio 2013\Projects\01. Team\Main\obj\Debug\Main.csprojResolveAssemblyReference.cache
+c:\users\katya\documents\visual studio 2013\Projects\01. Team\Main\obj\Debug\Main.exe
+c:\users\katya\documents\visual studio 2013\Projects\01. Team\Main\obj\Debug\Main.pdb
