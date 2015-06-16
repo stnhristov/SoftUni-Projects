@@ -1,0 +1,15 @@
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Backgrounds\menubackground.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\RPG_Demo1.exe
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\RPG_Demo1.pdb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\RpgLibrary.dll
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\XRpgLibrary.dll
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\RpgLibrary.pdb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\XRpgLibrary.pdb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.csprojResolveAssemblyReference.cache
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.exe
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.pdb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Fonts\ControlFont.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\StopBar.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\LeftArrowUp.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\RightArrowUp.xnb
