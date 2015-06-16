@@ -8,12 +8,17 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 using XRpgLibrary;
+using XRpgLibrary.TileEngine;
 
 namespace RPG_Demo1.GameScreens
 {
     public class GamePlayScreen:BaseGameState
     {
         #region Field Region
+
+        Engine engine = new Engine(32, 32);
+        Tileset tileset;
+        TileMap map;
         #endregion
 
         #region Property Region
@@ -35,6 +40,19 @@ namespace RPG_Demo1.GameScreens
         }
         protected override void LoadContent()
         {
+            Texture2D tilesetTexture = Game.Content.Load<Texture2D>("Tilesets/starterTileSet1");
+            tileset = new Tileset(tilesetTexture, 8, 8, 32, 32);
+
+            MapLayer layer = new MapLayer(40, 40);
+            for (int y = 0; y < layer.Height; y++) 
+            {
+                for (int x = 0; x < layer.Width; x++) 
+                {
+                    Tile tile = new Tile(3, 0);
+                    layer.SetTile(x, y, tile);
+                }
+            }
+            map = new TileMap(tileset, layer);
             base.LoadContent();
         }
         public override void Update(GameTime gameTime)
@@ -43,7 +61,18 @@ namespace RPG_Demo1.GameScreens
         }
         public override void Draw(GameTime gameTime)
         {
+            GameRef.SpriteBatch.Begin
+                (SpriteSortMode.Immediate,
+                BlendState.AlphaBlend,
+                SamplerState.PointClamp,
+                null,
+                null,
+                null,
+                Matrix.Identity
+                );
+            map.Draw(GameRef.SpriteBatch);
             base.Draw(gameTime);
+            GameRef.SpriteBatch.End();
         }
 
         #endregion
