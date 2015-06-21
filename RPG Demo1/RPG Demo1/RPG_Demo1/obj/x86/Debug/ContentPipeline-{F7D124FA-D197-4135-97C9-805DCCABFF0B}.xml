@@ -46,7 +46,6 @@
       <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\RightArrowUp.xnb</Output>
       <Time>2015-06-16T04:02:11.837308+03:00</Time>
     </Item>
-<<<<<<< HEAD
     <Item>
       <Source>Tilesets\starterTileSet1.png</Source>
       <Name>Tilesets\starterTileSet1</Name>
@@ -54,10 +53,37 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\starterTileSet1.xnb</Output>
-      <Time>2015-06-16T21:04:48.0532235+03:00</Time>
+      <Time>2015-06-20T17:28:30.9706975+03:00</Time>
     </Item>
-=======
->>>>>>> c351f761c38918c84819703b6401f7dd7bbc0bc0
+    <Item>
+      <Source>Music\MENU.mp3</Source>
+      <Name>Music\MENU</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.xnb</Output>
+      <Extra>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.wma</Extra>
+      <Time>2015-06-19T23:37:43.8679156+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\LEVEL_1.mp3</Source>
+      <Name>Music\LEVEL_1</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.xnb</Output>
+      <Extra>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.wma</Extra>
+      <Time>2015-06-19T23:45:48.0156072+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Tilesets\tileset2.png</Source>
+      <Name>Tilesets\tileset2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tileset2.xnb</Output>
+      <Time>2015-06-20T17:45:32.3991199+03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F7D124FA-D197-4135-97C9-805DCCABFF0B}</ContentProjectGUID>

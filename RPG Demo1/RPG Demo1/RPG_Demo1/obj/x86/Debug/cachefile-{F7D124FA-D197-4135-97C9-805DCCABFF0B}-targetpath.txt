@@ -3,7 +3,9 @@ Content\Fonts\ControlFont.xnb
 Content\GUI\StopBar.xnb
 Content\GUI\LeftArrowUp.xnb
 Content\GUI\RightArrowUp.xnb
-<<<<<<< HEAD
 Content\Tilesets\starterTileSet1.xnb
-=======
->>>>>>> c351f761c38918c84819703b6401f7dd7bbc0bc0
+Content\Music\MENU.xnb
+Content\Music\MENU.wma
+Content\Music\LEVEL_1.xnb
+Content\Music\LEVEL_1.wma
+Content\Tilesets\tileset2.xnb

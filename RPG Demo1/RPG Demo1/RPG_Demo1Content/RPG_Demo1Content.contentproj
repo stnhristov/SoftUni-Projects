@@ -64,7 +64,20 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
-<<<<<<< HEAD
+  <ItemGroup>
+    <Compile Include="Music\MENU.mp3">
+      <Name>MENU</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Music\LEVEL_1.mp3">
+      <Name>LEVEL_1</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Tilesets\starterTileSet1.png">
       <Name>starterTileSet1</Name>
@@ -72,8 +85,13 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
-=======
->>>>>>> c351f761c38918c84819703b6401f7dd7bbc0bc0
+  <ItemGroup>
+    <Compile Include="Tilesets\tileset2.png">
+      <Name>tileset2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

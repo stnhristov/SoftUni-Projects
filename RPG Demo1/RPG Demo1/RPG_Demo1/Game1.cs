@@ -11,13 +11,17 @@ using Microsoft.Xna.Framework.Media;
 using XRpgLibrary;
 using RPG_Demo1.GameScreens;
 
+using RPG_Demo1.MusicManager;
+
 namespace RPG_Demo1
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         #region XNA Field Region
+
         GraphicsDeviceManager graphics;
         public SpriteBatch SpriteBatch;
+
         #endregion
         #region Game State Region
         GameStateManager stateManager;
@@ -68,6 +72,7 @@ namespace RPG_Demo1
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+
             base.Update(gameTime);
         }
         protected override void Draw(GameTime gameTime)

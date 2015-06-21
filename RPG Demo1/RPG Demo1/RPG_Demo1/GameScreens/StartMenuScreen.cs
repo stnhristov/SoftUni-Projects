@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 namespace RPG_Demo1.GameScreens
 {
     public class StartMenuScreen:BaseGameState
@@ -21,8 +23,10 @@ namespace RPG_Demo1.GameScreens
         LinkLabel startGame;
         LinkLabel loadGame;
         LinkLabel exitGame;
+        Song song;
 
         float maxItemWidth = 0f;
+
 
         #endregion
 
@@ -47,6 +51,10 @@ namespace RPG_Demo1.GameScreens
         {
             base.LoadContent();
             ContentManager Content = Game.Content;
+            song = Content.Load<Song>("Music/MENU");
+            MediaPlayer.Play(song);
+            
+
             backgroundImage = new PictureBox(
                 Content.Load<Texture2D>("Backgrounds/menubackground"),
                 GameRef.ScreenRectangle);
@@ -122,6 +130,8 @@ namespace RPG_Demo1.GameScreens
         public override void Update(GameTime gameTime)
         {
             ControlManager.Update(gameTime, PlayerIndexInControl);
+           
+            
             base.Update(gameTime);
         }
         public override void Draw(GameTime gameTime)
