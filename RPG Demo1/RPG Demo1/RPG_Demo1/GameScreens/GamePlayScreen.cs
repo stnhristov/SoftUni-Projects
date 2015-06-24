@@ -12,8 +12,11 @@ using Microsoft.Xna.Framework.Content;
 
 using XRpgLibrary;
 using XRpgLibrary.TileEngine;
+using XRpgLibrary.SpriteClasses;
 
 using RPG_Demo1.Component;
+using RPG_Demo1.MusicManager;
+
 namespace RPG_Demo1.GameScreens
 {
     public class GamePlayScreen:BaseGameState
@@ -25,6 +28,7 @@ namespace RPG_Demo1.GameScreens
         TileMap map;
         Player player;
         Song song;
+        AnimatedSprite sprite;
 
         #endregion
 
@@ -48,6 +52,23 @@ namespace RPG_Demo1.GameScreens
         }
         protected override void LoadContent()
         {
+            Texture2D spriteSheet = Game.Content.Load<Texture2D>("PlayerSprites/DwarfMale");
+            Dictionary<AnimationKey, Animation> animations = new Dictionary<AnimationKey, Animation>();
+
+            Animation animation = new Animation(3, 32, 32, 0, 0);
+            animations.Add(AnimationKey.Down, animation);
+
+            animation = new Animation(3, 32, 32, 0, 32);
+            animations.Add(AnimationKey.Left, animation);
+
+            animation = new Animation(3, 32, 32, 0, 64);
+            animations.Add(AnimationKey.Right, animation);
+
+            animation = new Animation(3, 32, 32, 0, 96);
+            animations.Add(AnimationKey.Up, animation);
+
+            sprite = new AnimatedSprite(spriteSheet, animations);
+
             base.LoadContent();
 
             
@@ -100,14 +121,66 @@ namespace RPG_Demo1.GameScreens
 
            map = new TileMap(tilesets, mapLayers);
 
-           ContentManager Content = Game.Content;
-           song = Content.Load<Song>("Music/LEVEL_1");
-           MediaPlayer.Play(song);
+           Music GamePlayMusic = new Music("Music/LEVEL_1", song);
             
         }
         public override void Update(GameTime gameTime)
         {
             player.Update(gameTime);
+            sprite.Update(gameTime);
+
+            Vector2 motion = new Vector2();
+
+            if (InputHandler.KeyDown(Keys.W) || InputHandler.KeyDown(Keys.Up)) 
+            {
+                sprite.CurrentAnimation = AnimationKey.Up;
+                motion.Y = -1;
+            }
+            else if (InputHandler.KeyDown(Keys.S) || InputHandler.KeyDown(Keys.Down)) 
+            {
+                sprite.CurrentAnimation = AnimationKey.Down;
+                motion.Y = 1;
+            }
+            if (InputHandler.KeyDown(Keys.A) || InputHandler.KeyDown(Keys.Left)) 
+            {
+                sprite.CurrentAnimation = AnimationKey.Left;
+                motion.X = -1;
+            }
+            else if (InputHandler.KeyDown(Keys.D) || InputHandler.KeyDown(Keys.Right)) 
+            {
+                sprite.CurrentAnimation = AnimationKey.Right;
+                motion.X = 1;
+            }
+
+            if (motion != Vector2.Zero)
+            {
+                sprite.IsAnimating = true;
+                motion.Normalize();
+
+                sprite.Position += motion * sprite.Speed;
+                sprite.LockToMap();
+
+                if (player.Camera.CameraMode == CameraMode.Follow) player.Camera.LockToSprite(sprite);
+            }
+            else 
+            {
+                sprite.IsAnimating = false;
+            }
+
+            if (InputHandler.KeyReleased(Keys.F)) 
+            {
+                player.Camera.ToggleCameraMode();
+                if (player.Camera.CameraMode == CameraMode.Follow) player.Camera.LockToSprite(sprite);
+            }
+
+            if (player.Camera.CameraMode != CameraMode.Follow) 
+            {
+                if (InputHandler.KeyReleased(Keys.C)) 
+                {
+                    player.Camera.LockToSprite(sprite);
+                }
+            }
+
             base.Update(gameTime);
         }
         public override void Draw(GameTime gameTime)
@@ -122,7 +195,10 @@ namespace RPG_Demo1.GameScreens
                 Matrix.Identity
                 );
             map.Draw(GameRef.SpriteBatch,player.Camera);
+            sprite.Draw(gameTime, GameRef.SpriteBatch, player.Camera);
+
             base.Draw(gameTime);
+
             GameRef.SpriteBatch.End();
         }
 

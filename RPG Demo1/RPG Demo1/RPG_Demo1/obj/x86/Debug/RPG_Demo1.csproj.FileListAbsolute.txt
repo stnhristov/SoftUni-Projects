@@ -19,3 +19,11 @@ C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG
 C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.xnb
 C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.wma
 C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tileset2.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianMale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfMale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfMale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicMale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianFemale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfFemale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfFemale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicFemale.xnb

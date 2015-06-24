@@ -12,9 +12,11 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
+
+using RPG_Demo1.MusicManager;
 namespace RPG_Demo1.GameScreens
 {
-    public class StartMenuScreen:BaseGameState
+    public class StartMenuScreen : BaseGameState
     {
         #region Field Region
 
@@ -35,7 +37,8 @@ namespace RPG_Demo1.GameScreens
 
         #region Constructor Region
 
-        public StartMenuScreen(Game game, GameStateManager manager) : base(game, manager) 
+        public StartMenuScreen(Game game, GameStateManager manager)
+            : base(game, manager)
         {
         }
 
@@ -51,9 +54,7 @@ namespace RPG_Demo1.GameScreens
         {
             base.LoadContent();
             ContentManager Content = Game.Content;
-            song = Content.Load<Song>("Music/MENU");
-            MediaPlayer.Play(song);
-            
+            Music menu = new Music("Music/MENU", song);
 
             backgroundImage = new PictureBox(
                 Content.Load<Texture2D>("Backgrounds/menubackground"),
@@ -94,7 +95,7 @@ namespace RPG_Demo1.GameScreens
 
             foreach (Control c in ControlManager)
             {
-                if (c is LinkLabel) 
+                if (c is LinkLabel)
                 {
                     if (c.Size.X > maxItemWidth) maxItemWidth = c.Size.X;
                     c.Position = position;
@@ -104,24 +105,24 @@ namespace RPG_Demo1.GameScreens
             ControlManager_FocusChanged(startGame, null);
         }
 
-        void ControlManager_FocusChanged(object sender, EventArgs e) 
+        void ControlManager_FocusChanged(object sender, EventArgs e)
         {
             Control control = sender as Control;
             Vector2 position = new Vector2(control.Position.X + maxItemWidth + 10f, control.Position.Y);
             arrowImage.SetPosition(position);
         }
 
-        private void menuItem_Selected(object sender, EventArgs e) 
+        private void menuItem_Selected(object sender, EventArgs e)
         {
-            if (sender == startGame) 
+            if (sender == startGame)
+            {
+                StateManager.PushState(GameRef.CharacterGenerationScreen);
+            }
+            if (sender == loadGame)
             {
                 StateManager.PushState(GameRef.GamePlayScreen);
             }
-            if (sender == loadGame) 
-            {
-                StateManager.PushState(GameRef.GamePlayScreen);
-            }
-            if (sender == exitGame) 
+            if (sender == exitGame)
             {
                 GameRef.Exit();
             }
@@ -130,8 +131,8 @@ namespace RPG_Demo1.GameScreens
         public override void Update(GameTime gameTime)
         {
             ControlManager.Update(gameTime, PlayerIndexInControl);
-           
-            
+
+
             base.Update(gameTime);
         }
         public override void Draw(GameTime gameTime)

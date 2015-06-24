@@ -10,35 +10,34 @@ using Microsoft.Xna.Framework.Audio;
 
 namespace RPG_Demo1.MusicManager
 {
-    public class Music:Game1
+    public class Music : Game1
     {
         private Song song;
         private string songPath;
 
-        public Song SONG 
-        { 
+        public Song SONG
+        {
             get { return song; }
             private set { song = value; }
         }
 
-        public string SongPath 
+        public string SongPath
         {
             get { return songPath; }
             set { songPath = value; }
         }
-        public Music(string songPath, Song song) 
+        public Music(string songPath, Song song)
         {
             this.SongPath = songPath;
             this.SONG = song;
-            LoadContent(); 
+            LoadContent();
         }
 
         protected override void LoadContent()
         {
             SONG = Content.Load<Song>(SongPath);
             MediaPlayer.Play(SONG);
-            base.LoadContent();
         }
     }
-    
+
 }

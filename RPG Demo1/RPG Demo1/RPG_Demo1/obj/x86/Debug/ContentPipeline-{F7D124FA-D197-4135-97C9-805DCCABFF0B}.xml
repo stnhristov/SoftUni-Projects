@@ -84,6 +84,78 @@
       <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tileset2.xnb</Output>
       <Time>2015-06-20T17:45:32.3991199+03:00</Time>
     </Item>
+    <Item>
+      <Source>PlayerSprites\CaucasianMale.png</Source>
+      <Name>PlayerSprites\CaucasianMale</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianMale.xnb</Output>
+      <Time>2015-06-24T23:46:23.8725028+03:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\DwarfMale.png</Source>
+      <Name>PlayerSprites\DwarfMale</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfMale.xnb</Output>
+      <Time>2015-06-24T23:46:31.1369183+03:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\ElfMale.png</Source>
+      <Name>PlayerSprites\ElfMale</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfMale.xnb</Output>
+      <Time>2015-06-24T23:46:36.7352385+03:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\NordicMale.png</Source>
+      <Name>PlayerSprites\NordicMale</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicMale.xnb</Output>
+      <Time>2015-06-24T23:46:47.286842+03:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\CaucasianFemale.png</Source>
+      <Name>PlayerSprites\CaucasianFemale</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianFemale.xnb</Output>
+      <Time>2015-06-25T00:37:00.850208+03:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\DwarfFemale.png</Source>
+      <Name>PlayerSprites\DwarfFemale</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfFemale.xnb</Output>
+      <Time>2015-06-25T00:37:06.2205151+03:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\ElfFemale.png</Source>
+      <Name>PlayerSprites\ElfFemale</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfFemale.xnb</Output>
+      <Time>2015-06-25T00:37:14.1319676+03:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerSprites\NordicFemale.png</Source>
+      <Name>PlayerSprites\NordicFemale</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicFemale.xnb</Output>
+      <Time>2015-06-25T00:37:20.8383512+03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F7D124FA-D197-4135-97C9-805DCCABFF0B}</ContentProjectGUID>

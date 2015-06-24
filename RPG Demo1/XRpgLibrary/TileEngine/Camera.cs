@@ -7,8 +7,11 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using XRpgLibrary.SpriteClasses;
+
 namespace XRpgLibrary.TileEngine
 {
+    public enum CameraMode { Free,Follow}
     public class Camera
     {
         #region Field Region
@@ -17,6 +20,7 @@ namespace XRpgLibrary.TileEngine
         float speed;
         float zoom;
         Rectangle viewportRectangle;
+        CameraMode mode;
 
         #endregion
 
@@ -39,6 +43,11 @@ namespace XRpgLibrary.TileEngine
             get { return zoom; }
         }
 
+        public CameraMode CameraMode 
+        {
+            get { return mode; }
+        }
+
         #endregion
 
         #region Constructor Region
@@ -48,6 +57,7 @@ namespace XRpgLibrary.TileEngine
             speed = 4f;
             zoom = 1f;
             viewportRectangle = viewportRect;
+            mode = CameraMode.Follow;
         }
 
         public Camera(Rectangle viewportRect, Vector2 position) 
@@ -56,6 +66,7 @@ namespace XRpgLibrary.TileEngine
             zoom = 1f;
             viewportRectangle = viewportRect;
             Position = position;
+            mode = CameraMode.Follow;
         }
 
         #endregion
@@ -64,6 +75,8 @@ namespace XRpgLibrary.TileEngine
 
         public void Update(GameTime gameTime)
         {
+            if (mode == CameraMode.Follow) return;
+
             Vector2 motion = Vector2.Zero;
 
             if (InputHandler.KeyDown(Keys.Left)) motion.X = -speed;
@@ -72,11 +85,12 @@ namespace XRpgLibrary.TileEngine
             if (InputHandler.KeyDown(Keys.Up)) motion.Y = -speed;
             else if (InputHandler.KeyDown(Keys.Down)) motion.Y = speed;
 
-            if (motion != Vector2.Zero) motion.Normalize();
-
-            position += motion * speed;
-
-            LockCamera();
+            if (motion != Vector2.Zero) 
+            {
+                motion.Normalize();
+                position += motion * speed;
+                LockCamera();
+            }
         }
         private void LockCamera() 
         {
@@ -84,6 +98,25 @@ namespace XRpgLibrary.TileEngine
             position.Y = MathHelper.Clamp(position.Y, 0, TileMap.HeightInPixels - viewportRectangle.Height);
         }
 
+        public void LockToSprite(AnimatedSprite sprite) 
+        {
+            position.X = sprite.Position.X + sprite.Width / 2 - (viewportRectangle.Width / 2);
+            position.Y = sprite.Position.Y + sprite.Height / 2 - (viewportRectangle.Height / 2);
+
+            LockCamera();
+        }
+
+        public void ToggleCameraMode() 
+        {
+            if (mode == CameraMode.Follow)
+            {
+                mode = CameraMode.Free;
+            }
+            else if (mode == CameraMode.Free) 
+            {
+                mode = CameraMode.Follow;
+            }
+        }
         #endregion
     }
 }

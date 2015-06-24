@@ -23,17 +23,26 @@ namespace RPG_Demo1
         public SpriteBatch SpriteBatch;
 
         #endregion
+
         #region Game State Region
+
         GameStateManager stateManager;
+
         public TitleScreen TitleScreen;
         public StartMenuScreen StartMenuScreen;
         public GamePlayScreen GamePlayScreen;
+        public CharacterGenerationScreen CharacterGenerationScreen;
+
         #endregion
+
         #region Screen Field Region
+
         const int screenWidth = 1024;
         const int screenHeight = 768;
         public readonly Rectangle ScreenRectangle;
+
         #endregion
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -53,6 +62,7 @@ namespace RPG_Demo1
             TitleScreen = new TitleScreen(this, stateManager);
             StartMenuScreen = new GameScreens.StartMenuScreen(this, stateManager);
             GamePlayScreen = new GamePlayScreen(this, stateManager);
+            CharacterGenerationScreen = new CharacterGenerationScreen(this, stateManager);
 
             stateManager.ChangeState(TitleScreen);
         }

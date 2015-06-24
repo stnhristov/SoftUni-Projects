@@ -9,3 +9,11 @@ Content\Music\MENU.wma
 Content\Music\LEVEL_1.xnb
 Content\Music\LEVEL_1.wma
 Content\Tilesets\tileset2.xnb
+Content\PlayerSprites\CaucasianMale.xnb
+Content\PlayerSprites\DwarfMale.xnb
+Content\PlayerSprites\ElfMale.xnb
+Content\PlayerSprites\NordicMale.xnb
+Content\PlayerSprites\CaucasianFemale.xnb
+Content\PlayerSprites\DwarfFemale.xnb
+Content\PlayerSprites\ElfFemale.xnb
+Content\PlayerSprites\NordicFemale.xnb

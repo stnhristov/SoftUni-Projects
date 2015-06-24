@@ -25,7 +25,7 @@
         Texture2D rightTexture;
         Texture2D stopTexture;
 
-        Color selectedColor = Color.White;
+        Color selectedColor = Color.Black;
         int maxItemWidth;
         int selectedItem;
 
@@ -65,7 +65,7 @@
             rightTexture = rightArrow;
             stopTexture = stop;
             TabStop = true;
-            Color = Color.Black;
+            Color = Color.White;
         }
 
         #endregion
