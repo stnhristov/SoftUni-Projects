@@ -2,22 +2,22 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Backgrounds\menubackground.png</Source>
-      <Name>Backgrounds\menubackground</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Backgrounds\menubackground.xnb</Output>
-      <Time>2015-06-15T22:58:02.3894993+03:00</Time>
-    </Item>
-    <Item>
       <Source>Fonts\ControlFont.spritefont</Source>
       <Name>Fonts\ControlFont</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Fonts\ControlFont.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Fonts\ControlFont.xnb</Output>
       <Time>2015-06-16T03:01:19.1253848+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\menubackground.png</Source>
+      <Name>Backgrounds\menubackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Backgrounds\menubackground.xnb</Output>
+      <Time>2015-06-15T22:58:02.3894993+03:00</Time>
     </Item>
     <Item>
       <Source>GUI\StopBar.png</Source>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\StopBar.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\StopBar.xnb</Output>
       <Time>2015-06-16T04:01:59.6226093+03:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\LeftArrowUp.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\LeftArrowUp.xnb</Output>
       <Time>2015-06-16T04:02:06.4229983+03:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\RightArrowUp.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\RightArrowUp.xnb</Output>
       <Time>2015-06-16T04:02:11.837308+03:00</Time>
     </Item>
     <Item>
@@ -52,37 +52,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\starterTileSet1.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\starterTileSet1.xnb</Output>
       <Time>2015-06-20T17:28:30.9706975+03:00</Time>
     </Item>
     <Item>
-      <Source>Music\MENU.mp3</Source>
-      <Name>Music\MENU</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.xnb</Output>
-      <Extra>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.wma</Extra>
-      <Time>2015-06-19T23:37:43.8679156+03:00</Time>
-    </Item>
-    <Item>
-      <Source>Music\LEVEL_1.mp3</Source>
-      <Name>Music\LEVEL_1</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.xnb</Output>
-      <Extra>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.wma</Extra>
-      <Time>2015-06-19T23:45:48.0156072+03:00</Time>
-    </Item>
-    <Item>
-      <Source>Tilesets\tileset2.png</Source>
-      <Name>Tilesets\tileset2</Name>
+      <Source>Tilesets\tilesetne2.png</Source>
+      <Name>Tilesets\tilesetne2</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tileset2.xnb</Output>
-      <Time>2015-06-30T16:26:02.4599618+03:00</Time>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tilesetne2.xnb</Output>
+      <Time>2015-06-20T17:45:32.3991199+03:00</Time>
     </Item>
     <Item>
       <Source>PlayerSprites\CaucasianMale.png</Source>
@@ -90,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianMale.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianMale.xnb</Output>
       <Time>2015-06-24T23:46:23.8725028+03:00</Time>
     </Item>
     <Item>
@@ -99,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfMale.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfMale.xnb</Output>
       <Time>2015-06-30T16:28:06.5240579+03:00</Time>
     </Item>
     <Item>
@@ -108,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfMale.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfMale.xnb</Output>
       <Time>2015-06-24T23:46:36.7352385+03:00</Time>
     </Item>
     <Item>
@@ -117,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicMale.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicMale.xnb</Output>
       <Time>2015-06-24T23:46:47.286842+03:00</Time>
     </Item>
     <Item>
@@ -126,7 +106,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianFemale.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianFemale.xnb</Output>
       <Time>2015-06-25T00:37:00.850208+03:00</Time>
     </Item>
     <Item>
@@ -135,7 +115,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfFemale.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfFemale.xnb</Output>
       <Time>2015-06-25T00:37:06.2205151+03:00</Time>
     </Item>
     <Item>
@@ -144,7 +124,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfFemale.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfFemale.xnb</Output>
       <Time>2015-06-25T00:37:14.1319676+03:00</Time>
     </Item>
     <Item>
@@ -153,17 +133,46 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicFemale.xnb</Output>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicFemale.xnb</Output>
       <Time>2015-06-25T00:37:20.8383512+03:00</Time>
     </Item>
     <Item>
-      <Source>Tilesets\tilesetne2.png</Source>
-      <Name>Tilesets\tilesetne2</Name>
+      <Source>Tilesets\tileset2.png</Source>
+      <Name>Tilesets\tileset2</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tilesetne2.xnb</Output>
-      <Time>2015-06-20T17:45:32.3991199+03:00</Time>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tileset2.xnb</Output>
+      <Time>2015-06-30T16:26:02.4599618+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\MENU.mp3</Source>
+      <Name>Music\MENU</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.xnb</Output>
+      <Extra>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.wma</Extra>
+      <Time>2015-06-19T23:37:43.8679156+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\LEVEL_1.mp3</Source>
+      <Name>Music\LEVEL_1</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.xnb</Output>
+      <Extra>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.wma</Extra>
+      <Time>2015-06-19T23:45:48.0156072+03:00</Time>
+    </Item>
+    <Item>
+      <Source>arc1.png</Source>
+      <Name>arc1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\arc1.xnb</Output>
+      <Time>2015-07-01T17:05:18.81341+03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -172,10 +181,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -204,7 +213,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2015-06-11T21:49:45.0453716+03:00</Value>
+        <Value>2015-06-29T19:49:56.6609977+03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

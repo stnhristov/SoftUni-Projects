@@ -20,7 +20,8 @@ namespace RPG_Demo1
         #region XNA Field Region
 
         GraphicsDeviceManager graphics;
-        public SpriteBatch SpriteBatch;
+        public SpriteBatch spriteBatch;
+        private Vector2 positionVector2=new Vector2(200,200);
 
         #endregion
 
@@ -70,9 +71,13 @@ namespace RPG_Demo1
         {
             base.Initialize();
         }
+
+       
+
         protected override void LoadContent()
         {
-            SpriteBatch = new SpriteBatch(GraphicsDevice);
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            
         }
         protected override void UnloadContent()
         {
@@ -82,12 +87,15 @@ namespace RPG_Demo1
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+            
 
             base.Update(gameTime);
         }
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+           
+
             base.Draw(gameTime);
         }
     }

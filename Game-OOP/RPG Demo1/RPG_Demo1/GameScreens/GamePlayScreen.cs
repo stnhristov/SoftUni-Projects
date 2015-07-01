@@ -216,7 +216,7 @@ namespace RPG_Demo1.GameScreens
         }
         public override void Draw(GameTime gameTime)
         {
-            GameRef.SpriteBatch.Begin
+            GameRef.spriteBatch.Begin
                 (SpriteSortMode.Immediate,
                 BlendState.AlphaBlend,
                 SamplerState.PointClamp,
@@ -225,12 +225,12 @@ namespace RPG_Demo1.GameScreens
                 null,
                 Matrix.Identity
                 );
-            map.Draw(GameRef.SpriteBatch,player.Camera);
-            sprite.Draw(gameTime, GameRef.SpriteBatch, player.Camera);
+            map.Draw(GameRef.spriteBatch,player.Camera);
+            sprite.Draw(gameTime, GameRef.spriteBatch, player.Camera);
 
             base.Draw(gameTime);
 
-            GameRef.SpriteBatch.End();
+            GameRef.spriteBatch.End();
         }
 
         #endregion

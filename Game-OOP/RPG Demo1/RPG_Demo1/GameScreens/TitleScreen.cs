@@ -58,13 +58,13 @@ namespace RPG_Demo1.GameScreens
 
         public override void Draw(GameTime gameTime)
         {
-            GameRef.SpriteBatch.Begin();
+            GameRef.spriteBatch.Begin();
 
             base.Draw(gameTime);
 
-            GameRef.SpriteBatch.Draw(backgroundImage, GameRef.ScreenRectangle, Color.White);
-            ControlManager.Draw(GameRef.SpriteBatch);
-            GameRef.SpriteBatch.End();
+            GameRef.spriteBatch.Draw(backgroundImage, GameRef.ScreenRectangle, Color.White);
+            ControlManager.Draw(GameRef.spriteBatch);
+            GameRef.spriteBatch.End();
         }
         #endregion
 
