@@ -1,1 +1,2 @@
 C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1Content\obj\x86\Debug\RPG_Demo1Content.contentprojResolveAssemblyReference.cache
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1Content\obj\x86\Debug\RPG_Demo1Content.contentprojResolveAssemblyReference.cache
