@@ -1,0 +1,93 @@
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Backgrounds\menubackground.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\RPG_Demo1.exe
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\RPG_Demo1.pdb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\RpgLibrary.dll
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\XRpgLibrary.dll
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\RpgLibrary.pdb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\XRpgLibrary.pdb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.csprojResolveAssemblyReference.cache
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.exe
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.pdb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Fonts\ControlFont.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\StopBar.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\LeftArrowUp.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\RightArrowUp.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\starterTileSet1.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.wma
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.wma
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tileset2.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianMale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfMale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfMale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicMale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianFemale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfFemale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfFemale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicFemale.xnb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tilesetne2.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Fonts\ControlFont.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Backgrounds\menubackground.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\StopBar.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\LeftArrowUp.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\RightArrowUp.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\starterTileSet1.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tilesetne2.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianMale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfMale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfMale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicMale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianFemale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfFemale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfFemale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicFemale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tileset2.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.wma
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.wma
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\RPG_Demo1.exe
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\RPG_Demo1.pdb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\RpgLibrary.dll
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\XRpgLibrary.dll
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\RpgLibrary.pdb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\XRpgLibrary.pdb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.csprojResolveAssemblyReference.cache
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.exe
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.pdb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\arc1.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Fonts\ControlFont.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Backgrounds\menubackground.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\StopBar.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\LeftArrowUp.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\RightArrowUp.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\starterTileSet1.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tilesetne2.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianMale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfMale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfMale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicMale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianFemale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfFemale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfFemale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicFemale.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tileset2.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\arc1.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.xnb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.wma
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.wma
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\RPG_Demo1.exe
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\RPG_Demo1.pdb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\RpgLibrary.dll
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\XRpgLibrary.dll
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\RpgLibrary.pdb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\XRpgLibrary.pdb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.csprojResolveAssemblyReference.cache
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.exe
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.pdb
+C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\Game-OOP\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\arc1.xnb
