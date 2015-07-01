@@ -23,12 +23,18 @@ namespace RPG_Demo1.GameScreens
     {
         #region Field Region
 
-        Engine engine = new Engine(32, 32);
-        Tileset tileset;
-        TileMap map;
-        Player player;
-        Song song;
-        AnimatedSprite sprite;
+        private Engine engine = new Engine(32, 32);
+        private Tileset tileset;
+        private TileMap map;
+        private Player player;
+        private Player player2;
+        private Song song;
+        private AnimatedSprite sprite;
+        private AnimatedSprite sprite2;
+
+
+
+       
 
         #endregion
         
@@ -40,6 +46,8 @@ namespace RPG_Demo1.GameScreens
         public GamePlayScreen(Game game, GameStateManager manager) : base(game, manager) 
         {
             player = new Player(game);
+            
+            
         }
 
         #endregion
@@ -52,6 +60,25 @@ namespace RPG_Demo1.GameScreens
         }
         protected override void LoadContent()
         {
+            
+            Texture2D _monkeyTexture2D = Game.Content.Load<Texture2D>("PlayerSprites/CaucasianFemale");
+
+            Dictionary<AnimationKey, Animation> animations2 = new Dictionary<AnimationKey, Animation>();
+
+            Animation animation2 = new Animation(3, 32, 32, 0, 0);
+            animations2.Add(AnimationKey.Down, animation2);
+
+            animation2 = new Animation(3, 32, 32, 0, 32);
+            animations2.Add(AnimationKey.Left, animation2);
+
+            animation2 = new Animation(3, 32, 32, 0, 64);
+            animations2.Add(AnimationKey.Right, animation2);
+
+            animation2 = new Animation(3, 32, 32, 0, 96);
+            animations2.Add(AnimationKey.Up, animation2);
+
+            
+
             Texture2D spriteSheet = Game.Content.Load<Texture2D>("PlayerSprites/DwarfMale");
             Dictionary<AnimationKey, Animation> animations = new Dictionary<AnimationKey, Animation>();
 
@@ -68,6 +95,7 @@ namespace RPG_Demo1.GameScreens
             animations.Add(AnimationKey.Up, animation);
 
             sprite = new AnimatedSprite(spriteSheet, animations);
+            sprite2 = new AnimatedSprite(_monkeyTexture2D, animations2);
 
             base.LoadContent();
 
@@ -139,6 +167,9 @@ namespace RPG_Demo1.GameScreens
         {
             player.Update(gameTime);
             sprite.Update(gameTime);
+            sprite2.Update(gameTime);
+           
+
 
             //collision not tested
             BoundingBox CollisionDetectionPlayer = new BoundingBox(new Vector3(sprite.Position.X - 2, sprite.Position.Y - 2, 0),
@@ -148,25 +179,60 @@ namespace RPG_Demo1.GameScreens
 
             Vector2 motion = new Vector2();
 
-            if (InputHandler.KeyDown(Keys.W) || InputHandler.KeyDown(Keys.Up)) 
+            if (InputHandler.KeyDown(Keys.W)) 
             {
                 sprite.CurrentAnimation = AnimationKey.Up;
                 motion.Y = -1;
             }
-            else if (InputHandler.KeyDown(Keys.S) || InputHandler.KeyDown(Keys.Down)) 
+            else if (InputHandler.KeyDown(Keys.S)) 
             {
                 sprite.CurrentAnimation = AnimationKey.Down;
                 motion.Y = 1;
             }
-            if (InputHandler.KeyDown(Keys.A) || InputHandler.KeyDown(Keys.Left)) 
+            if (InputHandler.KeyDown(Keys.A)) 
             {
                 sprite.CurrentAnimation = AnimationKey.Left;
                 motion.X = -1;
             }
-            else if (InputHandler.KeyDown(Keys.D) || InputHandler.KeyDown(Keys.Right)) 
+            else if (InputHandler.KeyDown(Keys.D)) 
             {
                 sprite.CurrentAnimation = AnimationKey.Right;
                 motion.X = 1;
+            }
+           
+
+            Vector2 motion2 = new Vector2();
+
+            if (InputHandler.KeyDown(Keys.Up))
+            {
+                sprite2.CurrentAnimation = AnimationKey.Up;
+                motion2.Y = -1;
+            }
+            else if (InputHandler.KeyDown(Keys.Down))
+            {
+                sprite2.CurrentAnimation = AnimationKey.Down;
+                motion2.Y = 1;
+            }
+            if (InputHandler.KeyDown(Keys.Left))
+            {
+                sprite2.CurrentAnimation = AnimationKey.Left;
+                motion2.X = -1;
+            }
+            else if (InputHandler.KeyDown(Keys.Right))
+            {
+                sprite2.CurrentAnimation = AnimationKey.Right;
+                motion2.X = 1;
+            }
+
+            if (motion2 != Vector2.Zero)
+            {
+                sprite2.IsAnimating = true;
+                motion2.Normalize();
+
+                sprite2.Position += motion2 * sprite2.Speed;
+                sprite2.LockToMap();
+
+                if (player.Camera.CameraMode == CameraMode.Follow) player.Camera.LockToSprite(sprite2);
             }
 
             if (motion != Vector2.Zero)
@@ -211,11 +277,12 @@ namespace RPG_Demo1.GameScreens
                     player.Camera.LockToSprite(sprite);
                 }
             }
-
             base.Update(gameTime);
         }
         public override void Draw(GameTime gameTime)
         {
+            
+
             GameRef.spriteBatch.Begin
                 (SpriteSortMode.Immediate,
                 BlendState.AlphaBlend,
@@ -227,6 +294,8 @@ namespace RPG_Demo1.GameScreens
                 );
             map.Draw(GameRef.spriteBatch,player.Camera);
             sprite.Draw(gameTime, GameRef.spriteBatch, player.Camera);
+            
+           sprite2.Draw(gameTime,GameRef.spriteBatch,player.Camera);
 
             base.Draw(gameTime);
 
