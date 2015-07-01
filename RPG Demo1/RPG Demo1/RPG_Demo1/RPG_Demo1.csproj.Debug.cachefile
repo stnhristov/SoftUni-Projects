@@ -1,11 +1,9 @@
-Content\Backgrounds\menubackground.xnb
 Content\Fonts\ControlFont.xnb
+Content\Backgrounds\menubackground.xnb
 Content\GUI\StopBar.xnb
 Content\GUI\LeftArrowUp.xnb
 Content\GUI\RightArrowUp.xnb
 Content\Tilesets\starterTileSet1.xnb
-Content\Music\MENU.xnb
-Content\Music\LEVEL_1.xnb
 Content\Tilesets\tileset2.xnb
 Content\PlayerSprites\CaucasianMale.xnb
 Content\PlayerSprites\DwarfMale.xnb
@@ -15,5 +13,7 @@ Content\PlayerSprites\CaucasianFemale.xnb
 Content\PlayerSprites\DwarfFemale.xnb
 Content\PlayerSprites\ElfFemale.xnb
 Content\PlayerSprites\NordicFemale.xnb
+Content\Music\MENU.xnb
+Content\Music\LEVEL_1.xnb
 Content\Music\MENU.wma
 Content\Music\LEVEL_1.wma

@@ -4,3 +4,9 @@ C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RpgLibrary\ob
 C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RpgLibrary\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RpgLibrary\obj\x86\Debug\RpgLibrary.dll
 C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RpgLibrary\obj\x86\Debug\RpgLibrary.pdb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RpgLibrary\bin\x86\Debug\RpgLibrary.dll
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RpgLibrary\bin\x86\Debug\RpgLibrary.pdb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RpgLibrary\obj\x86\Debug\RpgLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RpgLibrary\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RpgLibrary\obj\x86\Debug\RpgLibrary.dll
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RpgLibrary\obj\x86\Debug\RpgLibrary.pdb

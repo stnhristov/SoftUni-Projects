@@ -1,0 +1,12 @@
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RpgLibrary\bin\x86\Debug\RpgLibrary.dll
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RpgLibrary\bin\x86\Debug\RpgLibrary.pdb
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RpgLibrary\obj\x86\Debug\RpgLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RpgLibrary\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RpgLibrary\obj\x86\Debug\RpgLibrary.dll
+C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RpgLibrary\obj\x86\Debug\RpgLibrary.pdb
+C:\Users\Katya\Desktop\SoftUni-Projects-master(1)\SoftUni-Projects-master\Game-OOP\RpgLibrary\bin\x86\Debug\RpgLibrary.dll
+C:\Users\Katya\Desktop\SoftUni-Projects-master(1)\SoftUni-Projects-master\Game-OOP\RpgLibrary\bin\x86\Debug\RpgLibrary.pdb
+C:\Users\Katya\Desktop\SoftUni-Projects-master(1)\SoftUni-Projects-master\Game-OOP\RpgLibrary\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Katya\Desktop\SoftUni-Projects-master(1)\SoftUni-Projects-master\Game-OOP\RpgLibrary\obj\x86\Debug\RpgLibrary.dll
+C:\Users\Katya\Desktop\SoftUni-Projects-master(1)\SoftUni-Projects-master\Game-OOP\RpgLibrary\obj\x86\Debug\RpgLibrary.pdb
+C:\Users\Katya\Desktop\SoftUni-Projects-master(1)\SoftUni-Projects-master\Game-OOP\RpgLibrary\obj\x86\Debug\RpgLibrary.csprojResolveAssemblyReference.cache

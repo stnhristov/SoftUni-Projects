@@ -27,3 +27,32 @@ C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG
 C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfFemale.xnb
 C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfFemale.xnb
 C:\Users\Stanislav\Documents\Visual Studio 2013\Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicFemale.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Fonts\ControlFont.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Backgrounds\menubackground.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\StopBar.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\LeftArrowUp.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\GUI\RightArrowUp.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\starterTileSet1.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Tilesets\tileset2.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianMale.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfMale.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfMale.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicMale.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\CaucasianFemale.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\DwarfFemale.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\ElfFemale.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\PlayerSprites\NordicFemale.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.xnb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\MENU.wma
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\Content\Music\LEVEL_1.wma
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\RPG_Demo1.exe
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\RPG_Demo1.pdb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\RpgLibrary.dll
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\XRpgLibrary.dll
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\RpgLibrary.pdb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\bin\x86\Debug\XRpgLibrary.pdb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.csprojResolveAssemblyReference.cache
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.exe
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\RPG Demo1\RPG Demo1\RPG_Demo1\obj\x86\Debug\RPG_Demo1.pdb
