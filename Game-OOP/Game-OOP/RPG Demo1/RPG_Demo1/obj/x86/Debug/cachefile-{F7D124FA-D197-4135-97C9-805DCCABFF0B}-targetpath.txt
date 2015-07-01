@@ -15,8 +15,8 @@ Content\PlayerSprites\ElfFemale.xnb
 Content\PlayerSprites\NordicFemale.xnb
 Content\Tilesets\tileset2.xnb
 Content\arc1.xnb
+Content\PlayerSprites\arc1.xnb
 Content\Music\MENU.xnb
 Content\Music\MENU.wma
 Content\Music\LEVEL_1.xnb
 Content\Music\LEVEL_1.wma
-Content\PlayerSprites\arc1.xnb

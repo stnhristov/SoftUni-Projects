@@ -10,3 +10,9 @@ C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\XRpgLibrary\obj\x86\
 C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\XRpgLibrary\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\XRpgLibrary\obj\x86\Debug\XRpgLibrary.dll
 C:\Users\Борислав\Desktop\SoftUni-Projects\Game-OOP\XRpgLibrary\obj\x86\Debug\XRpgLibrary.pdb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\Game-OOP\XRpgLibrary\bin\x86\Debug\XRpgLibrary.dll
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\Game-OOP\XRpgLibrary\bin\x86\Debug\XRpgLibrary.pdb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\Game-OOP\XRpgLibrary\obj\x86\Debug\XRpgLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\Game-OOP\XRpgLibrary\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\Game-OOP\XRpgLibrary\obj\x86\Debug\XRpgLibrary.dll
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\Game-OOP\XRpgLibrary\obj\x86\Debug\XRpgLibrary.pdb
