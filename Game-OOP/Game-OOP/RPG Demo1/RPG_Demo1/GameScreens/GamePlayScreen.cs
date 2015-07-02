@@ -193,15 +193,15 @@
             }
             else if (collisionDetectionSprite2.Intersects(collisionDetectionSprite))
             {
-                this.sprite2.Position = new Vector2(-100, -100);
+                sprites.Remove(sprite2);
             }
             else if (collisionDetectionSprite3.Intersects(collisionDetectionSprite))
             {
-                this.sprite3Sprite.Position = new Vector2(-100, -100);
+                sprites.Remove(sprite3Sprite);
             }
             else if (collisionDetectionSprite4.Intersects(collisionDetectionSprite))
             {
-                this.redMonkeyAnimatedSprite.Position = new Vector2(-100, -100);
+                sprites.Remove(redMonkeyAnimatedSprite);
             }
         }
 

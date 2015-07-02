@@ -21,3 +21,4 @@ C:\Users\Katya\Documents\GitHub\SoftUni-Projects\Game-OOP\Game-OOP\RpgLibrary\bi
 C:\Users\Katya\Documents\GitHub\SoftUni-Projects\Game-OOP\Game-OOP\RpgLibrary\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Katya\Documents\GitHub\SoftUni-Projects\Game-OOP\Game-OOP\RpgLibrary\obj\x86\Debug\RpgLibrary.dll
 C:\Users\Katya\Documents\GitHub\SoftUni-Projects\Game-OOP\Game-OOP\RpgLibrary\obj\x86\Debug\RpgLibrary.pdb
+C:\Users\Katya\Documents\GitHub\SoftUni-Projects\Game-OOP\Game-OOP\RpgLibrary\obj\x86\Debug\RpgLibrary.csprojResolveAssemblyReference.cache
