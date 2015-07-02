@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RPG_Demo1.Component.Player" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAgAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Component\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Demo1.Game1" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAEAAAAEACAgAAAAAAAQAAAABAAAgAQAgAAAAAAAQ=</HashCode>
+      <FileName>Game1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Demo1.Program" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Demo1.GameScreens.BaseGameState" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAQ=</HashCode>
+      <FileName>GameScreens\BaseGameState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Demo1.GameScreens.CharacterGenerationScreen" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAgEAAAgAACAAAAAAQECAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>GameScreens\CharacterGenerationScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Demo1.GameScreens.GamePlayScreen" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAQBAQAAAxAAAAAAAAAQABAIRAABAAAAAASAAAQ=</HashCode>
+      <FileName>GameScreens\GamePlayScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Demo1.GameScreens.StartMenuScreen" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgQAAAECAAwAAADAAAAAAAAAIAAAAAAAAAAAAgAQ=</HashCode>
+      <FileName>GameScreens\StartMenuScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Demo1.GameScreens.TitleScreen" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAEAAAiAAAAAAAAAAAAAAAAAAABAAAAAAAAQ=</HashCode>
+      <FileName>GameScreens\TitleScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Demo1.MusicManager.Music" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIQ=</HashCode>
+      <FileName>MusicManager\Music.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
