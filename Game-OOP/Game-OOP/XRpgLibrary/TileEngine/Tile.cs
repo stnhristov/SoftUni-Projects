@@ -1,42 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace XRpgLibrary.TileEngine
+﻿namespace XRpgLibrary.TileEngine
 {
     public class Tile
     {
-        #region Field Region
+        #region Constructor Region
 
-        int tileIndex;
-        int tileset;
+        public Tile(int tileIndex, int tileset)
+        {
+            this.TileIndex = tileIndex;
+            this.TileSet = tileset;
+        }
 
         #endregion
 
         #region Property Region
 
-        public int TileIndex 
-        {
-            get { return tileIndex; }
-            private set { tileIndex = value; }
-        }
+        public int TileIndex { get; private set; }
 
-        public int TileSet 
-        {
-            get { return tileset; }
-            private set { tileset = value; }
-        }
-
-        #endregion
-
-        #region Constructor Region
-
-        public Tile(int tileIndex, int tileset) 
-        {
-            TileIndex = tileIndex;
-            TileSet = tileset;
-        }
+        public int TileSet { get; private set; }
 
         #endregion
     }
