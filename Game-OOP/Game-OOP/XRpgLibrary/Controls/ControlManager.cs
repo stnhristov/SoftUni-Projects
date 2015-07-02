@@ -1,127 +1,169 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-
-namespace XRpgLibrary.Controls
+﻿namespace XRpgLibrary.Controls
 {
-    public class ControlManager:List<Control>
+    using System;
+    using System.Collections.Generic;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+    using Microsoft.Xna.Framework.Input;
+
+    public class ControlManager : List<Control>
     {
-        #region Fields And Properties
+        #region Fields
 
-        int selectedControl = 0;
+        private static SpriteFont spriteFont;
 
-        static SpriteFont spriteFont;
-
-        public static SpriteFont SpriteFont 
-        {
-            get { return spriteFont; }
-        }
+        private int selectedControl = 0;
 
         #endregion
 
         #region Constructors
 
-        public ControlManager(SpriteFont spriteFont) : base() 
-        {
-            ControlManager.spriteFont = spriteFont;
-        }
-        public ControlManager(SpriteFont spriteFont, int capacity) : base(capacity) 
-        {
-            ControlManager.spriteFont = spriteFont;
-        }
-        public ControlManager(SpriteFont spriteFont, IEnumerable<Control> collection) : base(collection) 
+        public ControlManager(SpriteFont spriteFont)
+            : base()
         {
             ControlManager.spriteFont = spriteFont;
         }
 
+        public ControlManager(SpriteFont spriteFont, int capacity)
+            : base(capacity)
+        {
+            ControlManager.spriteFont = spriteFont;
+        }
+
+        public ControlManager(SpriteFont spriteFont, IEnumerable<Control> collection)
+            : base(collection)
+        {
+            ControlManager.spriteFont = spriteFont;
+        }
+
+        #endregion
+
+        #region Event Region
+        public event EventHandler FocusChanged;
+        #endregion
+
+        #region Properies
+        public static SpriteFont SpriteFont
+        {
+            get { return spriteFont; }
+        }
         #endregion
 
         #region Methods
 
-        public void Update(GameTime gameTime, PlayerIndex playerIndex) 
+        public void Update(GameTime gameTime, PlayerIndex playerIndex)
         {
-            if (Count == 0) return;
+            if (this.Count == 0)
+            {
+                return;
+            }
+
             foreach (Control c in this)
             {
-                if (c.Enabled) c.Update(gameTime);
-                if (c.HasFocus) c.HandleInput(playerIndex);
+                if (c.Enabled)
+                {
+                    c.Update(gameTime);
+                }
+
+                if (c.HasFocus)
+                {
+                    c.HandleInput(playerIndex);
+                }
             }
+
             if (InputHandler.ButtonPressed(Buttons.LeftThumbstickUp, playerIndex) ||
                 InputHandler.ButtonPressed(Buttons.DPadUp, playerIndex) ||
-                InputHandler.KeyPressed(Keys.Up)) 
+                InputHandler.KeyPressed(Keys.Up))
             {
-                PreviousControl();
+                this.PreviousControl();
             }
+
             if (InputHandler.ButtonPressed(Buttons.LeftThumbstickDown, playerIndex) ||
                 InputHandler.ButtonPressed(Buttons.DPadDown, playerIndex) ||
-                InputHandler.KeyPressed(Keys.Down)) 
+                InputHandler.KeyPressed(Keys.Down))
             {
-                NextControl();
+                this.NextControl();
             }
         }
-        public void Draw(SpriteBatch spriteBatch) 
+
+        public void Draw(SpriteBatch spriteBatch)
         {
             foreach (Control c in this)
             {
-                if (c.Visible) 
+                if (c.Visible)
                 {
                     c.Draw(spriteBatch);
                 }
-                
             }
         }
-        #region Event Region
-        public event EventHandler FocusChanged;
-        #endregion
-        public void NextControl() 
+
+        public void NextControl()
         {
-            if (Count == 0) return;
-
-            int currentControl = selectedControl;
-
-            this[selectedControl].HasFocus = false;
-
-            do 
+            if (this.Count == 0)
             {
-                selectedControl++;
-                if (selectedControl == Count) selectedControl = 0;
-                if (this[selectedControl].TabStop && this[selectedControl].Enabled) 
+                return;
+            }
+
+            int currentControl = this.selectedControl;
+
+            this[this.selectedControl].HasFocus = false;
+
+            do
+            {
+                this.selectedControl++;
+                if (this.selectedControl == this.Count)
                 {
-                    if (FocusChanged != null) FocusChanged(this[selectedControl], null);
+                    this.selectedControl = 0;
+                }
+
+                if (this[this.selectedControl].TabStop && this[this.selectedControl].Enabled)
+                {
+                    if (this.FocusChanged != null)
+                    {
+                        this.FocusChanged(this[this.selectedControl], null);
+                    }
+
                     break;
                 }
-            } 
-            while (currentControl != selectedControl);
+            }
+            while (currentControl != this.selectedControl);
 
-            this[selectedControl].HasFocus = true;
+            this[this.selectedControl].HasFocus = true;
         }
-        public void PreviousControl() 
+
+        public void PreviousControl()
         {
-            if (Count == 0) return;
-
-            int currentControl = selectedControl;
-
-            this[selectedControl].HasFocus = false;
-
-            do 
+            if (this.Count == 0)
             {
-                selectedControl--;
+                return;
+            }
 
-                if (selectedControl < 0) selectedControl = Count - 1;
+            int currentControl = this.selectedControl;
 
-                if (this[selectedControl].TabStop && this[selectedControl].Enabled) 
+            this[this.selectedControl].HasFocus = false;
+
+            do
+            {
+                this.selectedControl--;
+
+                if (this.selectedControl < 0)
                 {
-                    if (FocusChanged != null) FocusChanged(this[selectedControl], null);
+                    this.selectedControl = this.Count - 1;
+                }
+
+                if (this[this.selectedControl].TabStop && this[this.selectedControl].Enabled)
+                {
+                    if (this.FocusChanged != null)
+                    {
+                        this.FocusChanged(this[this.selectedControl], null);
+                    }
+
                     break;
                 }
-            } 
-            while (currentControl != selectedControl);
-            this[selectedControl].HasFocus = true;
+            }
+            while (currentControl != this.selectedControl);
+
+            this[this.selectedControl].HasFocus = true;
         }
 
         #endregion

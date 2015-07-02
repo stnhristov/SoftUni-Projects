@@ -1,73 +1,85 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-
-using XRpgLibrary.SpriteClasses;
-
-namespace XRpgLibrary.TileEngine
+﻿namespace XRpgLibrary.TileEngine
 {
-    public enum CameraMode { Free,Follow}
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Input;
+    using SpriteClasses;
+
     public class Camera
     {
         #region Field Region
 
-        Vector2 position;
-        float speed;
-        float zoom;
-        Rectangle viewportRectangle;
-        CameraMode mode;
-
-        #endregion
-
-        #region Property Region
-
-        public Vector2 Position 
-        {
-            get { return position; }
-            private set { position = value; }
-        }
-
-        public float Speed 
-        {
-            get { return speed; }
-            set { speed = (float)MathHelper.Clamp(speed, 1f, 16f); }
-        }
-
-        public float Zoom 
-        {
-            get { return zoom; }
-        }
-
-        public CameraMode CameraMode 
-        {
-            get { return mode; }
-        }
+        private Vector2 position;
+        private float speed;
+        private float zoom;
+        private Rectangle viewportRectangle;
 
         #endregion
 
         #region Constructor Region
 
-        public Camera(Rectangle viewportRect) 
+        public Camera(Rectangle viewportRect)
         {
-            speed = 4f;
-            zoom = 1f;
-            viewportRectangle = viewportRect;
-            mode = CameraMode.Follow;
+            this.Speed = this.speed;
+            this.Zoom = this.zoom;
+            this.viewportRectangle = viewportRect;
+            CameraMode = CameraMode.Follow;
         }
 
-        public Camera(Rectangle viewportRect, Vector2 position) 
+        public Camera(Rectangle viewportRectangle, Vector2 position)
         {
-            speed = 4f;
-            zoom = 1f;
-            viewportRectangle = viewportRect;
-            Position = position;
-            mode = CameraMode.Follow;
+            this.Speed = this.speed;
+            this.Zoom = this.zoom;
+            this.ViewportRectangle = viewportRectangle;
+            this.Position = position;
+            CameraMode = CameraMode.Follow;
         }
+
+        #endregion
+
+        #region Property Region
+
+        public Vector2 Position
+        {
+            get
+            {
+                return this.position;
+            }
+
+            private set
+            {
+                this.position = value;
+            }
+        }
+
+        public float Speed
+        {
+            get
+            {
+                return this.speed;
+            }
+
+            set
+            {
+                this.speed = (float)MathHelper.Clamp(this.speed, 1f, 16f);
+            }
+        }
+
+        public float Zoom
+        {
+            get
+            {
+                return this.zoom;
+            }
+
+            set
+            {
+                this.zoom = 1f;
+            }
+        }
+
+        public CameraMode CameraMode { get; private set; }
+
+        public Rectangle ViewportRectangle { get; set; }
 
         #endregion
 
@@ -75,47 +87,63 @@ namespace XRpgLibrary.TileEngine
 
         public void Update(GameTime gameTime)
         {
-            if (mode == CameraMode.Follow) return;
+            if (CameraMode == CameraMode.Follow)
+            {
+                return;
+            }
 
             Vector2 motion = Vector2.Zero;
 
-            if (InputHandler.KeyDown(Keys.Left)) motion.X = -speed;
-            else if (InputHandler.KeyDown(Keys.Right)) motion.X = speed;
+            if (InputHandler.KeyDown(Keys.Left))
+            {
+                motion.X = -this.speed;
+            }
+            else if (InputHandler.KeyDown(Keys.Right))
+            {
+                motion.X = this.speed;
+            }
 
-            if (InputHandler.KeyDown(Keys.Up)) motion.Y = -speed;
-            else if (InputHandler.KeyDown(Keys.Down)) motion.Y = speed;
+            if (InputHandler.KeyDown(Keys.Up))
+            {
+                motion.Y = -this.speed;
+            }
+            else if (InputHandler.KeyDown(Keys.Down))
+            {
+                motion.Y = this.speed;
+            }
 
-            if (motion != Vector2.Zero) 
+            if (motion != Vector2.Zero)
             {
                 motion.Normalize();
-                position += motion * speed;
-                LockCamera();
+                this.position += motion * this.speed;
+                this.LockCamera();
             }
         }
-        private void LockCamera() 
+
+        public void LockToSprite(AnimatedSprite sprite)
         {
-            position.X = MathHelper.Clamp(position.X, 0, TileMap.WidthInPixels - viewportRectangle.Width);
-            position.Y = MathHelper.Clamp(position.Y, 0, TileMap.HeightInPixels - viewportRectangle.Height);
+            this.position.X = sprite.Position.X + (sprite.Width / 2) - (this.viewportRectangle.Width / 2);
+            this.position.Y = sprite.Position.Y + (sprite.Height / 2) - (this.viewportRectangle.Height / 2);
+
+            this.LockCamera();
         }
 
-        public void LockToSprite(AnimatedSprite sprite) 
+        public void ToggleCameraMode()
         {
-            position.X = sprite.Position.X + sprite.Width / 2 - (viewportRectangle.Width / 2);
-            position.Y = sprite.Position.Y + sprite.Height / 2 - (viewportRectangle.Height / 2);
-
-            LockCamera();
-        }
-
-        public void ToggleCameraMode() 
-        {
-            if (mode == CameraMode.Follow)
+            if (CameraMode == CameraMode.Follow)
             {
-                mode = CameraMode.Free;
+                CameraMode = CameraMode.Free;
             }
-            else if (mode == CameraMode.Free) 
+            else if (CameraMode == CameraMode.Free)
             {
-                mode = CameraMode.Follow;
+                CameraMode = CameraMode.Follow;
             }
+        }
+
+        private void LockCamera()
+        {
+            this.position.X = MathHelper.Clamp(this.position.X, 0, TileMap.WidthInPixels - this.viewportRectangle.Width);
+            this.position.Y = MathHelper.Clamp(this.position.Y, 0, TileMap.HeightInPixels - this.viewportRectangle.Height);
         }
         #endregion
     }

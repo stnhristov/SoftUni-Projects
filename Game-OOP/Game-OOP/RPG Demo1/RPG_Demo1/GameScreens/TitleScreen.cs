@@ -1,54 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-
-using XRpgLibrary;
-using XRpgLibrary.Controls;
-namespace RPG_Demo1.GameScreens
+﻿namespace RPG_Demo1.GameScreens
 {
-    public class TitleScreen:BaseGameState
+    using System;
+
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Content;
+    using Microsoft.Xna.Framework.Graphics;
+
+    using XRpgLibrary;
+    using XRpgLibrary.Controls;
+
+    public class TitleScreen : BaseGameState
     {
         #region Field Region
 
-        Texture2D backgroundImage;
-        LinkLabel startLabel;
+        private Texture2D backgroundImage;
+        private LinkLabel startLabel;
 
         #endregion
 
         #region Constructor Region
 
-        public TitleScreen(Game game, GameStateManager manager) : base(game, manager) 
+        public TitleScreen(Game game, GameStateManager manager)
+            : base(game, manager)
         {
-
         }
 
         #endregion
 
         #region XNA Method Region
-
-        protected override void LoadContent()
-        {
-            ContentManager Content = GameRef.Content;
-
-            backgroundImage = Content.Load<Texture2D>("Backgrounds/menubackground");
-
-            base.LoadContent();
-
-            startLabel = new LinkLabel();
-            startLabel.Position = new Vector2(360, 420);
-            startLabel.Text = @"Press ""Enter""";
-            startLabel.Color = Color.White;
-            startLabel.TabStop = true;
-            startLabel.HasFocus = true;
-            startLabel.Selected += new EventHandler(startLabel_Selected);
-
-            ControlManager.Add(startLabel);
-        }
 
         public override void Update(GameTime gameTime)
         {
@@ -58,19 +37,39 @@ namespace RPG_Demo1.GameScreens
 
         public override void Draw(GameTime gameTime)
         {
-            GameRef.spriteBatch.Begin();
+            GameRef.SpriteBatch.Begin();
 
             base.Draw(gameTime);
 
-            GameRef.spriteBatch.Draw(backgroundImage, GameRef.ScreenRectangle, Color.White);
-            ControlManager.Draw(GameRef.spriteBatch);
-            GameRef.spriteBatch.End();
+            GameRef.SpriteBatch.Draw(this.backgroundImage, GameRef.ScreenRectangle, Color.White);
+            ControlManager.Draw(GameRef.SpriteBatch);
+            GameRef.SpriteBatch.End();
         }
+
+        protected override void LoadContent()
+        {
+            ContentManager content = GameRef.Content;
+
+            this.backgroundImage = content.Load<Texture2D>("Backgrounds/menubackground");
+
+            base.LoadContent();
+
+            this.startLabel = new LinkLabel();
+            this.startLabel.Position = new Vector2(360, 420);
+            this.startLabel.Text = @"Press ""Enter""";
+            this.startLabel.Color = Color.White;
+            this.startLabel.TabStop = true;
+            this.startLabel.HasFocus = true;
+            this.startLabel.Selected += new EventHandler(this.StartLabel_Selected);
+
+            ControlManager.Add(this.startLabel);
+        }
+
         #endregion
 
         #region Title Screen Methods
 
-        private void startLabel_Selected(object sender, EventArgs e) 
+        private void StartLabel_Selected(object sender, EventArgs e)
         {
             StateManager.PushState(GameRef.StartMenuScreen);
         }

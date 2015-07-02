@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-namespace XRpgLibrary.Controls
+﻿namespace XRpgLibrary.Controls
 {
-    public class Label:Control
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+
+    public class Label : Control
     {
         #region Constructor Region
-        
-        public Label() 
+
+        public Label()
         {
-            tabStop = false;
+            this.TabStop = false;
         }
 
         #endregion
@@ -23,12 +19,14 @@ namespace XRpgLibrary.Controls
         public override void Update(GameTime gameTime)
         {
         }
+
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(SpriteFont, Text, Position, Color);
+            spriteBatch.DrawString(this.SpriteFont, this.Text, this.Position, this.Color);
         }
+
         public override void HandleInput(PlayerIndex playerIndex)
-        {    
+        {
         }
 
         #endregion

@@ -1,91 +1,102 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.GamerServices;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
-
-
 namespace XRpgLibrary
 {
-    public class GameStateManager : Microsoft.Xna.Framework.GameComponent
+    using System;
+    using System.Collections.Generic;
+    using Microsoft.Xna.Framework;
+
+    public class GameStateManager : GameComponent
     {
-        #region Event Region
-        public event EventHandler OnStateChange;
+        #region Fields Region
+
+        private const int StartDrawOrder = 5000;
+        private const int DrawOrderInc = 100;
+        private readonly Stack<GameState> gameStates = new Stack<GameState>();
+        private int drawOrder;
+
         #endregion
-        #region Fields And Properties Region
-        Stack<GameState> gameStates = new Stack<GameState>();
-        const int startDrawOrder = 5000;
-        const int drawOrderInc = 100;
-        int drawOrder;
-        public GameState CurrentState 
-        {
-            get { return gameStates.Peek(); }
-        }
-        #endregion
+
         #region Constructor Region
-        public GameStateManager(Game game) : base(game) 
+
+        public GameStateManager(Game game)
+            : base(game)
         {
-            drawOrder = startDrawOrder;
+            this.drawOrder = StartDrawOrder;
         }
+
         #endregion
-        #region XNA Method Region
-        public override void Initialize()
-        {
-            base.Initialize();
-        }
-        public override void Update(GameTime gameTime)
-        {
-            base.Update(gameTime);
-        }
+
+        #region Event Region
+
+        public event EventHandler OnStateChange;
+
         #endregion
+
+        public GameState CurrentState
+        {
+            get { return this.gameStates.Peek(); }
+        }
+
+        #region Properties
+
+        #endregion
+
         #region Methods Region
-        public void PopState() 
+
+        public void PopState()
         {
-            if (gameStates.Count > 0) 
+            if (this.gameStates.Count > 0)
             {
-                RemoveState();
-                drawOrder -= drawOrderInc;
-                if (OnStateChange != null) { OnStateChange(this, null); }
+                this.RemoveState();
+                this.drawOrder -= DrawOrderInc;
+                if (this.OnStateChange != null)
+                {
+                    this.OnStateChange(this, null);
+                }
             }
         }
-        private void RemoveState() 
+
+        public void PushState(GameState newState)
         {
-            GameState State = gameStates.Peek();
-            OnStateChange -= State.StateChange;
-            Game.Components.Remove(State);
-            gameStates.Pop();
-        }
-        public void PushState(GameState newState) 
-        {
-            drawOrder += drawOrderInc;
-            newState.DrawOrder = drawOrder;
-            AddState(newState);
-            if (OnStateChange != null) 
+            this.drawOrder += DrawOrderInc;
+            newState.DrawOrder = this.drawOrder;
+            this.AddState(newState);
+
+            if (this.OnStateChange != null)
             {
-                OnStateChange(this, null);
+                this.OnStateChange(this, null);
             }
         }
-        private void AddState(GameState newState) 
+
+        public void ChangeState(GameState newState)
         {
-            gameStates.Push(newState);
+            while (this.gameStates.Count > 0)
+            {
+                this.RemoveState();
+            }
+
+            newState.DrawOrder = StartDrawOrder;
+            this.AddState(newState);
+            if (this.OnStateChange != null)
+            {
+                this.OnStateChange(this, null);
+            }
+        }
+
+        private void AddState(GameState newState)
+        {
+            this.gameStates.Push(newState);
             Game.Components.Add(newState);
-            OnStateChange += newState.StateChange;
+            this.OnStateChange += newState.StateChange;
         }
-        public void ChangeState(GameState newState) 
+
+        private void RemoveState()
         {
-            while (gameStates.Count > 0) { RemoveState(); }
-            newState.DrawOrder = startDrawOrder;
-            AddState(newState);
-            if (OnStateChange != null) 
-            {
-                OnStateChange(this, null);
-            }
+            GameState state = this.gameStates.Peek();
+            this.OnStateChange -= state.StateChange;
+            Game.Components.Remove(state);
+            this.gameStates.Pop();
         }
+
         #endregion
     }
 }

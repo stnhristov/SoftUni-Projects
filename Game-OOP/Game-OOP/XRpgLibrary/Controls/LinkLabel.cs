@@ -1,35 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-
-namespace XRpgLibrary.Controls
+﻿namespace XRpgLibrary.Controls
 {
-    public class LinkLabel:Control
-    {
-        #region Fields and Properties
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+    using Microsoft.Xna.Framework.Input;
 
-        Color selectedColor = Color.Black;
-        public Color SelectedColor 
-        {
-            get { return selectedColor; }
-            set { selectedColor = value; }
-        }
+    public class LinkLabel : Control
+    {
+        #region Fields
+
+        private Color selectedColor = Color.Black;
 
         #endregion
 
         #region Constructor Region
 
-        public LinkLabel() 
+        public LinkLabel()
         {
-            TabStop = true;
-            HasFocus = false;
-            Position = Vector2.Zero;
+            this.TabStop = true;
+            this.HasFocus = false;
+            this.Position = Vector2.Zero;
         }
+        #endregion
+
+        #region Properties
+
+        public Color SelectedColor
+        {
+            get { return this.selectedColor; }
+            set { this.selectedColor = value; }
+        }
+
         #endregion
 
         #region Abstract Methods
@@ -37,16 +37,31 @@ namespace XRpgLibrary.Controls
         public override void Update(GameTime gameTime)
         {
         }
+
         public override void Draw(SpriteBatch spriteBatch)
         {
-            if (hasFocus) spriteBatch.DrawString(SpriteFont, Text, Position, selectedColor);
-            else spriteBatch.DrawString(SpriteFont, Text, Position, Color);
+            if (this.HasFocus)
+            {
+                spriteBatch.DrawString(this.SpriteFont, this.Text, this.Position, this.selectedColor);
+            }
+            else
+            {
+                spriteBatch.DrawString(this.SpriteFont, this.Text, this.Position, this.Color);
+            }
         }
+
         public override void HandleInput(PlayerIndex playerIndex)
         {
-            if (!HasFocus) return;
+            if (!this.HasFocus)
+            {
+                return;
+            }
+
             if (InputHandler.KeyReleased(Keys.Enter) ||
-                InputHandler.ButtonReleased(Buttons.A, playerIndex)) base.OnSelected(null);
+                InputHandler.ButtonReleased(Buttons.A, playerIndex))
+            {
+                this.OnSelected(null);
+            }
         }
 
         #endregion

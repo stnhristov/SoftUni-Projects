@@ -1,108 +1,121 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.GamerServices;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
-
-
 namespace XRpgLibrary
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Microsoft.Xna.Framework;
+
     /// <summary>
     /// This is a game component that implements IUpdateable.
     /// </summary>
     public abstract partial class GameState : DrawableGameComponent
     {
-        #region Fields And Properties
-        List<GameComponent> childComponents;
-        public List<GameComponent> Components 
-        {
-            get { return childComponents; }
-        }
-        GameState tag;
-        public GameState Tag 
-        {
-            get { return tag; }
-        }
-        protected GameStateManager StateManager;
+        #region Fields
+
+        private readonly List<GameComponent> childComponents;
+        private readonly GameState tag;
+
         #endregion
+
         #region Constructor Region
-        public GameState(Game game, GameStateManager manager) : base(game) 
+
+        protected GameState(Game game, GameStateManager manager)
+            : base(game)
         {
-            StateManager = manager;
-            childComponents = new List<GameComponent>();
-            tag = this;
+            this.StateManager = manager;
+            this.childComponents = new List<GameComponent>();
+            this.tag = this;
         }
+
         #endregion
-        #region XNA Drawable Game Component Methods
-        public override void Initialize()
+
+        #region Properties
+
+        public GameStateManager StateManager { get; set; }
+
+        public List<GameComponent> Components
         {
-            base.Initialize();
+            get { return this.childComponents; }
         }
+
+        public GameState Tag
+        {
+            get { return this.tag; }
+        }
+
+        #endregion
+
+        #region XNA Drawable Game Component Methods
+
         public override void Update(GameTime gameTime)
         {
-            foreach (GameComponent component in childComponents)
+            foreach (GameComponent component in this.childComponents.Where(component => component.Enabled))
             {
-                if (component.Enabled) 
-                {
-                    component.Update(gameTime); 
-                }
+                component.Update(gameTime);
             }
+
             base.Update(gameTime);
         }
+
         public override void Draw(GameTime gameTime)
         {
-            DrawableGameComponent drawComponent;
-            foreach (GameComponent component in childComponents)
+            foreach (DrawableGameComponent drawComponent in this.childComponents.OfType<DrawableGameComponent>().Where(drawComponent => drawComponent.Visible))
             {
-                if (component is DrawableGameComponent) 
-                {
-                    drawComponent = component as DrawableGameComponent;
-                    if (drawComponent.Visible) 
-                    {
-                        drawComponent.Draw(gameTime);
-                    }
-                }
+                drawComponent.Draw(gameTime);
             }
+
             base.Draw(gameTime);
         }
+
         #endregion
+
         #region GameState Method Region
-        internal protected virtual void StateChange(object sender, EventArgs e) 
+
+        protected internal virtual void StateChange(object sender, EventArgs e)
         {
-            if (StateManager.CurrentState == Tag) { Show(); }
-            else { Hide(); }
-        }
-        protected virtual void Show() 
-        {
-            Visible = true;
-            Enabled = true;
-            foreach (GameComponent component in childComponents)
+            if (this.StateManager.CurrentState == this.Tag)
             {
-                component.Enabled = true;
-                if (component is DrawableGameComponent) 
-                {
-                    ((DrawableGameComponent)component).Visible = true;
-                }
-                
+                this.Show();
+            }
+            else
+            {
+                this.Hide();
             }
         }
-        protected virtual void Hide() 
+
+        protected virtual void Show()
         {
-            Visible = false;
-            Enabled = false;
-            foreach (GameComponent component in childComponents)
+            this.Visible = true;
+            this.Enabled = true;
+
+            foreach (GameComponent component in this.childComponents)
+            {
+                component.Enabled = true;
+
+                var gameComponent = component as DrawableGameComponent;
+
+                if (gameComponent != null)
+                {
+                    gameComponent.Visible = true;
+                }
+            }
+        }
+
+        protected virtual void Hide()
+        {
+            this.Visible = false;
+            this.Enabled = false;
+
+            foreach (GameComponent component in this.childComponents)
             {
                 component.Enabled = false;
-                if (component is DrawableGameComponent) 
+
+                var gameComponent = component as DrawableGameComponent;
+
+                if (gameComponent != null)
                 {
-                    ((DrawableGameComponent)component).Visible = false;
+                    gameComponent.Visible = false;
                 }
-                
             }
         }
         #endregion
