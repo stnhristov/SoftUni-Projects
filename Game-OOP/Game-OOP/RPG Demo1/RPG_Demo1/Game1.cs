@@ -50,6 +50,7 @@ namespace RPG_Demo1
             StartMenuScreen = new GameScreens.StartMenuScreen(this, this.stateManager);
             GamePlayScreen = new GamePlayScreen(this, this.stateManager);
             CharacterGenerationScreen = new CharacterGenerationScreen(this, this.stateManager);
+            BattleScreen = new BattleScreen(this, this.stateManager);
 
             this.stateManager.ChangeState(TitleScreen);
         }
@@ -65,6 +66,8 @@ namespace RPG_Demo1
         public GamePlayScreen GamePlayScreen { get; protected set; }
 
         public CharacterGenerationScreen CharacterGenerationScreen { get; protected set; }
+
+        public BattleScreen BattleScreen { get; protected set; }
 
         #endregion
 

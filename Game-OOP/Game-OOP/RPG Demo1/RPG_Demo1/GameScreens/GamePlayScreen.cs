@@ -191,16 +191,30 @@
                     this.sprite.Position = new Vector2(this.sprite.Position.X + 1, this.sprite.Position.Y + 1);
                 }
             }
+                //here
             else if (collisionDetectionSprite2.Intersects(collisionDetectionSprite))
             {
+                Music menu = new Music("Music/Boss_Fight", this.song);
+                StateManager.PushState(GameRef.BattleScreen);
+
+                this.sprite2.Position = new Vector2(-100, -100);
                 sprites.Remove(sprite2);
             }
             else if (collisionDetectionSprite3.Intersects(collisionDetectionSprite))
             {
+                Music menu = new Music("Music/Boss_Fight", this.song);
+                StateManager.PushState(GameRef.BattleScreen);
+
+                this.sprite3Sprite.Position = new Vector2(-100, -100);
                 sprites.Remove(sprite3Sprite);
+
             }
             else if (collisionDetectionSprite4.Intersects(collisionDetectionSprite))
             {
+                Music menu = new Music("Music/Boss_Fight", this.song);
+                StateManager.PushState(GameRef.BattleScreen);
+                
+                this.redMonkeyAnimatedSprite.Position = new Vector2(-100, -100);
                 sprites.Remove(redMonkeyAnimatedSprite);
             }
         }

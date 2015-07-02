@@ -20,3 +20,7 @@ Content\Music\MENU.xnb
 Content\Music\MENU.wma
 Content\Music\LEVEL_1.xnb
 Content\Music\LEVEL_1.wma
+Content\Backgrounds\battlescreen_layout.xnb
+Content\Music\Boss_Fight.xnb
+Content\Music\Boss_Fight.wma
+Content\GUI\onehealthpoint.xnb
