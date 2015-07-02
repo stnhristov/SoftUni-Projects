@@ -2,15 +2,12 @@
 {
     using System;
     using System.Collections.Generic;
-
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
     using Microsoft.Xna.Framework.Media;
-
     using RPG_Demo1.Component;
     using RPG_Demo1.MusicManager;
-
     using XRpgLibrary;
     using XRpgLibrary.SpriteClasses;
     using XRpgLibrary.TileEngine;
