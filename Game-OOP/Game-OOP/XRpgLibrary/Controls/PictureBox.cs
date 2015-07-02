@@ -1,62 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-namespace XRpgLibrary.Controls
+﻿namespace XRpgLibrary.Controls
 {
-    public class PictureBox:Control
-    {
-        #region Field Region
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
 
-        Texture2D image;
-        Rectangle sourceRect;
-        Rectangle destRect;
+    public class PictureBox : Control
+    {
+        #region Constructors
+
+        public PictureBox(Texture2D image, Rectangle destination)
+        {
+            this.Image = image;
+            this.DestinationRectangle = destination;
+            this.SourceRectangle = new Rectangle(0, 0, image.Width, image.Height);
+            this.Color = Color.White;
+        }
+
+        public PictureBox(Texture2D image, Rectangle destination, Rectangle source)
+        {
+            this.Image = image;
+            this.DestinationRectangle = destination;
+            this.SourceRectangle = source;
+            this.Color = Color.White;
+        }
 
         #endregion
 
         #region Property Region
 
-        public Texture2D Image 
-        {
-            get { return image; }
-            set { image = value; }
-        }
+        public Texture2D Image { get; protected set; }
 
-        public Rectangle SourceRectangle 
-        {
-            get { return sourceRect; }
-            set { sourceRect = value; }
-        }
+        public Rectangle SourceRectangle { get; protected set; }
 
-        public Rectangle DestinationRectangle 
-        {
-            get { return destRect; }
-            set { destRect = value; }
-        }
-
-        #endregion
-
-        #region Constructors
-
-        public PictureBox(Texture2D image, Rectangle destination) 
-        {
-            Image = image;
-            DestinationRectangle = destination;
-            SourceRectangle = new Rectangle(0, 0, image.Width, image.Height);
-            Color = Color.White;
-        }
-
-        public PictureBox(Texture2D image, Rectangle destination, Rectangle source) 
-        {
-            Image = image;
-            DestinationRectangle = destination;
-            SourceRectangle = source;
-            Color = Color.White;
-        }
+        public Rectangle DestinationRectangle { get; protected set; }
 
         #endregion
 
@@ -64,24 +39,24 @@ namespace XRpgLibrary.Controls
 
         public override void Update(GameTime gameTime)
         {
-            
         }
+
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(image, destRect, sourceRect, Color);
+            spriteBatch.Draw(this.Image, this.DestinationRectangle, this.SourceRectangle, this.Color);
         }
+
         public override void HandleInput(PlayerIndex playerIndex)
         {
-            
         }
 
         #endregion
 
         #region Picture Box Methods
 
-        public void SetPosition(Vector2 newPosition) 
+        public void SetPosition(Vector2 newPosition)
         {
-            destRect = new Rectangle((int)newPosition.X, (int)newPosition.Y, sourceRect.Width, sourceRect.Height);
+            this.DestinationRectangle = new Rectangle((int)newPosition.X, (int)newPosition.Y, this.SourceRectangle.Width, this.SourceRectangle.Height);
         }
 
         #endregion

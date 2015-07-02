@@ -256,7 +256,7 @@ namespace RPG_Demo1.GameScreens
         {
             
 
-            GameRef.spriteBatch.Begin
+            GameRef.SpriteBatch.Begin
                 (SpriteSortMode.Immediate,
                 BlendState.AlphaBlend,
                 SamplerState.PointClamp,
@@ -265,16 +265,16 @@ namespace RPG_Demo1.GameScreens
                 null,
                 Matrix.Identity
                 );
-            map.Draw(GameRef.spriteBatch,player.Camera);
-            sprite.Draw(gameTime, GameRef.spriteBatch, player.Camera);
+            map.Draw(GameRef.SpriteBatch,player.Camera);
+            sprite.Draw(gameTime, GameRef.SpriteBatch, player.Camera);
 
-            sprite2.Draw(gameTime, GameRef.spriteBatch, player.Camera);
-            sprite3Sprite.Draw(gameTime, GameRef.spriteBatch, player.Camera);
-            redMonkeyAnimatedSprite.Draw(gameTime,GameRef.spriteBatch,player.Camera);
+            sprite2.Draw(gameTime, GameRef.SpriteBatch, player.Camera);
+            sprite3Sprite.Draw(gameTime, GameRef.SpriteBatch, player.Camera);
+            redMonkeyAnimatedSprite.Draw(gameTime,GameRef.SpriteBatch,player.Camera);
 
             base.Draw(gameTime);
 
-            GameRef.spriteBatch.End();
+            GameRef.SpriteBatch.End();
         }
 
         #endregion

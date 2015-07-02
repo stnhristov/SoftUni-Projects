@@ -1,54 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-
-using XRpgLibrary;
-using XRpgLibrary.TileEngine;
-
-namespace RPG_Demo1.Component
+﻿namespace RPG_Demo1.Component
 {
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+    using XRpgLibrary.TileEngine;
+
     public class Player
     {
         #region Field Region
 
-        Camera camera;
-        Game1 gameRef;
-
-        #endregion
-
-        #region Property Region
-
-        public Camera Camera 
-        {
-            get { return camera; }
-            set { camera = value; }
-        }
+        private Camera camera;
+        private Game1 gameRef;
 
         #endregion
 
         #region Constructor Region
 
-        public Player(Game game) 
+        public Player(Game game)
         {
-            gameRef = (Game1)game;
-            camera = new Camera(gameRef.ScreenRectangle);
+            this.gameRef = (Game1)game;
+            this.camera = new Camera(this.gameRef.ScreenRectangle);
+        }
+
+        #endregion
+
+        #region Property Region
+
+        public Camera Camera
+        {
+            get { return this.camera; }
+            set { this.camera = value; }
         }
 
         #endregion
 
         #region Method Region
 
-        public void Update(GameTime gameTime) 
+        public void Update(GameTime gameTime)
         {
-            camera.Update(gameTime);
+            this.camera.Update(gameTime);
         }
 
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch) 
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
         }
 

@@ -72,8 +72,6 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Component\BadGuys.cs" />
-    <Compile Include="Component\BorkoCarq.cs" />
     <Compile Include="Component\Player.cs" />
     <Compile Include="GameScreens\BaseGameState.cs" />
     <Compile Include="GameScreens\CharacterGenerationScreen.cs" />

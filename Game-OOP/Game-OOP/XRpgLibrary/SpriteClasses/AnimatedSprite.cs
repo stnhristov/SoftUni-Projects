@@ -1,88 +1,82 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-
-using XRpgLibrary.TileEngine;
-
-namespace XRpgLibrary.SpriteClasses
+﻿namespace XRpgLibrary.SpriteClasses
 {
+    using System.Collections.Generic;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+    using TileEngine;
+
     public class AnimatedSprite
     {
         #region Field Region
 
-        Dictionary<AnimationKey, Animation> animations;
-        AnimationKey currentAnimation;
-        bool isAnimating;
+        private Dictionary<AnimationKey, Animation> animations;
 
-        Texture2D texture;
-        Vector2 position;
-        Vector2 velocity;
-        float speed = 2.0f;
-
-        #endregion
-
-        #region Property Region
-
-        public AnimationKey CurrentAnimation 
-        {
-            get { return currentAnimation; }
-            set { currentAnimation = value; }
-        }
-
-        public bool IsAnimating 
-        {
-            get { return isAnimating; }
-            set { isAnimating = value; }
-        }
-
-        public int Width 
-        {
-            get { return animations[currentAnimation].FrameWidth; }
-        }
-
-        public int Height 
-        {
-            get { return animations[currentAnimation].FrameHeight; }
-        }
-
-        public float Speed 
-        {
-            get { return speed; }
-            set { speed = MathHelper.Clamp(speed, 1.0f, 16.0f); }
-        }
-
-        public Vector2 Position 
-        {
-            get { return position; }
-            set { position = value; }
-        }
-
-        public Vector2 Velocity 
-        {
-            get { return velocity; }
-            set 
-            {
-                velocity = value;
-                if (velocity != Vector2.Zero) velocity.Normalize();
-            }
-        }
+        private Texture2D texture;
+        private Vector2 position;
+        private Vector2 velocity;
+        private float speed = 2.0f;
 
         #endregion
 
         #region Constructor Region
 
-        public AnimatedSprite(Texture2D sprite, Dictionary<AnimationKey, Animation> animation) 
+        public AnimatedSprite(Texture2D sprite, Dictionary<AnimationKey, Animation> animation)
         {
-            texture = sprite;
-            animations = new Dictionary<AnimationKey, Animation>();
+            this.texture = sprite;
+            this.animations = new Dictionary<AnimationKey, Animation>();
 
             foreach (AnimationKey key in animation.Keys)
             {
-                animations.Add(key, (Animation)animation[key].Clone());
+                this.animations.Add(key, (Animation)animation[key].Clone());
+            }
+        }
+
+        #endregion
+        #region Property Region
+
+        public AnimationKey CurrentAnimation { get; set; }
+
+        public bool IsAnimating { get; set; }
+
+        public int Width
+        {
+            get { return this.animations[this.CurrentAnimation].FrameWidth; }
+        }
+
+        public int Height
+        {
+            get { return this.animations[this.CurrentAnimation].FrameHeight; }
+        }
+
+        public float Speed
+        {
+            get { return this.speed; }
+
+            set { this.speed = MathHelper.Clamp(this.speed, 1.0f, 16.0f); }
+        }
+
+        public Vector2 Position
+        {
+            get { return this.position; }
+
+            set { this.position = value; }
+        }
+
+        public Vector2 Velocity
+        {
+            get
+            {
+                return this.velocity;
+            }
+
+            set
+            {
+                this.velocity = value;
+
+                if (this.velocity != Vector2.Zero)
+                {
+                    this.velocity.Normalize();
+                }
             }
         }
 
@@ -90,25 +84,27 @@ namespace XRpgLibrary.SpriteClasses
 
         #region Method Region
 
-        public void Update(GameTime gameTime) 
+        public void Update(GameTime gameTime)
         {
-            if (isAnimating) animations[currentAnimation].Update(gameTime);
+            if (this.IsAnimating)
+            {
+                this.animations[this.CurrentAnimation].Update(gameTime);
+            }
         }
 
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch, Camera camera) 
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch, Camera camera)
         {
-            spriteBatch.Draw
-                (texture,
-                position-camera.Position,
-                animations[currentAnimation].CurrentFrameRect,
-                Color.White
-                );
+            spriteBatch.Draw(
+                this.texture,
+                this.position - camera.Position,
+                this.animations[this.CurrentAnimation].CurrentFrameRect,
+                Color.White);
         }
 
-        public void LockToMap() 
+        public void LockToMap()
         {
-            position.X = MathHelper.Clamp(position.X, 0, TileMap.WidthInPixels - Width);
-            position.Y = MathHelper.Clamp(position.Y, 0, TileMap.HeightInPixels - Height);
+            this.position.X = MathHelper.Clamp(this.position.X, 0, TileMap.WidthInPixels - this.Width);
+            this.position.Y = MathHelper.Clamp(this.position.Y, 0, TileMap.HeightInPixels - this.Height);
         }
 
         #endregion

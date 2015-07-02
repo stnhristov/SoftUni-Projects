@@ -2,93 +2,67 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
 
-    public class LeftRightSelector:Control
+    public class LeftRightSelector : Control
     {
+        #region Field Region
+
+        private List<string> items = new List<string>();
+
+        private Texture2D leftTexture;
+        private Texture2D rightTexture;
+        private Texture2D stopTexture;
+
+        private Color selectedColor = Color.Black;
+        private int maxItemWidth;
+        private int selectedItem;
+
+        #endregion
+
+        #region Constructor Region
+
+        public LeftRightSelector(Texture2D leftArrow, Texture2D rightArrow, Texture2D stop)
+        {
+            this.leftTexture = leftArrow;
+            this.rightTexture = rightArrow;
+            this.stopTexture = stop;
+            this.TabStop = true;
+            this.Color = Color.White;
+        }
+
+        #endregion
+
         #region Event Region
 
         public event EventHandler SelectionChanged;
 
         #endregion
 
-        #region Field Region
-
-        List<string> items = new List<string>();
-
-        Texture2D leftTexture;
-        Texture2D rightTexture;
-        Texture2D stopTexture;
-
-        Color selectedColor = Color.Black;
-        int maxItemWidth;
-        int selectedItem;
-
-        #endregion
-
         #region Property Region
 
-        public Color SelectedColor 
+        public Color SelectedColor
         {
-            get { return selectedColor; }
-            set { selectedColor = value; }
+            get { return this.selectedColor; }
+            set { this.selectedColor = value; }
         }
 
-        public int SelectedIndex 
+        public int SelectedIndex
         {
-            get { return selectedItem; }
-            set { selectedItem = (int)MathHelper.Clamp(value, 0f, items.Count); }
+            get { return this.selectedItem; }
+            set { this.selectedItem = (int)MathHelper.Clamp(value, 0f, this.items.Count); }
         }
 
-        public string SelectedItem 
+        public string SelectedItem
         {
-            get { return Items[selectedItem]; }
+            get { return this.Items[this.selectedItem]; }
         }
 
-        public List<string> Items 
+        public List<string> Items
         {
-            get { return items; }
-        }
-
-        #endregion
-
-        #region Constructor Region
-
-        public LeftRightSelector(Texture2D leftArrow, Texture2D rightArrow, Texture2D stop) 
-        {
-            leftTexture = leftArrow;
-            rightTexture = rightArrow;
-            stopTexture = stop;
-            TabStop = true;
-            Color = Color.White;
-        }
-
-        #endregion
-
-        #region Method Region
-
-        public void SetItems(string[] items, int maxWidth) 
-        {
-            this.items.Clear();
-
-            foreach (string s in items)
-            {
-                this.items.Add(s);
-            }
-            maxItemWidth = maxWidth;
-        }
-
-        protected void OnSelectionChanged() 
-        {
-            if (SelectionChanged != null) 
-            {
-                SelectionChanged(this, null);
-            }
+            get { return this.items; }
         }
 
         #endregion
@@ -97,53 +71,108 @@
 
         public override void Update(GameTime gameTime)
         {
-            
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            Vector2 drawTo = position;
+            Vector2 drawTo = this.Position;
 
-            if (selectedItem != 0) spriteBatch.Draw(leftTexture, drawTo, Color.White);
-            else spriteBatch.Draw(stopTexture, drawTo, Color.White);
+            if (this.selectedItem != 0)
+            {
+                spriteBatch.Draw(this.leftTexture, drawTo, Color.White);
+            }
+            else
+            {
+                spriteBatch.Draw(this.stopTexture, drawTo, Color.White);
+            }
 
-            drawTo.X += leftTexture.Width + 5f;
-            float itemWidth = spriteFont.MeasureString(items[selectedItem]).X;
-            float offset = (maxItemWidth - itemWidth) / 2;
+            drawTo.X += this.leftTexture.Width + 5f;
+            float itemWidth = this.SpriteFont.MeasureString(this.items[this.selectedItem]).X;
+            float offset = (this.maxItemWidth - itemWidth) / 2;
 
             drawTo.X += offset;
 
-            if (hasFocus) spriteBatch.DrawString(spriteFont, items[selectedItem], drawTo, selectedColor);
-            else spriteBatch.DrawString(spriteFont, items[selectedItem], drawTo, Color);
+            if (this.HasFocus)
+            {
+                spriteBatch.DrawString(this.SpriteFont, this.items[this.selectedItem], drawTo, this.selectedColor);
+            }
+            else
+            {
+                spriteBatch.DrawString(this.SpriteFont, this.items[this.selectedItem], drawTo, this.Color);
+            }
 
-            drawTo.X += -1 * offset + maxItemWidth + 5f;
+            drawTo.X += (-1 * offset) + this.maxItemWidth + 5f;
 
-            if (selectedItem != items.Count - 1) spriteBatch.Draw(rightTexture, drawTo, Color.White);
-            else spriteBatch.Draw(stopTexture, drawTo, Color.White);
+            if (this.selectedItem != this.items.Count - 1)
+            {
+                spriteBatch.Draw(this.rightTexture, drawTo, Color.White);
+            }
+            else
+            {
+                spriteBatch.Draw(this.stopTexture, drawTo, Color.White);
+            }
         }
+
         public override void HandleInput(PlayerIndex playerIndex)
         {
-            if (items.Count == 0) return;
+            if (this.items.Count == 0)
+            {
+                return;
+            }
 
             if (InputHandler.ButtonReleased(Buttons.LeftThumbstickLeft, playerIndex) ||
                 InputHandler.ButtonReleased(Buttons.DPadLeft, playerIndex) ||
-                InputHandler.KeyReleased(Keys.Left)) 
+                InputHandler.KeyReleased(Keys.Left))
             {
-                selectedItem--;
-                if (selectedItem < 0) selectedItem = 0;
-                OnSelectionChanged();
+                this.selectedItem--;
+
+                if (this.selectedItem < 0)
+                {
+                    this.selectedItem = 0;
+                }
+
+                this.OnSelectionChanged();
             }
+
             if (InputHandler.ButtonReleased(Buttons.LeftThumbstickRight, playerIndex) ||
                 InputHandler.ButtonReleased(Buttons.DPadRight, playerIndex) ||
-                InputHandler.KeyReleased(Keys.Right)) 
+                InputHandler.KeyReleased(Keys.Right))
             {
-                selectedItem++;
-                if (selectedItem >= items.Count) selectedItem = items.Count - 1;
-                OnSelectionChanged();
+                this.selectedItem++;
+
+                if (this.selectedItem >= this.items.Count)
+                {
+                    this.selectedItem = this.items.Count - 1;
+                }
+
+                this.OnSelectionChanged();
             }
         }
 
         #endregion
 
+        #region Method Region
+
+        public void SetItems(string[] items, int maxWidth)
+        {
+            this.items.Clear();
+
+            foreach (string s in items)
+            {
+                this.items.Add(s);
+            }
+
+            this.maxItemWidth = maxWidth;
+        }
+
+        protected void OnSelectionChanged()
+        {
+            if (this.SelectionChanged != null)
+            {
+                this.SelectionChanged(this, null);
+            }
+        }
+
+        #endregion
     }
 }

@@ -1,43 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Media;
-using Microsoft.Xna.Framework.Audio;
-
-namespace RPG_Demo1.MusicManager
+﻿namespace RPG_Demo1.MusicManager
 {
+    using Microsoft.Xna.Framework.Media;
+
     public class Music : Game1
     {
-        private Song song;
-        private string songPath;
-
-        public Song SONG
-        {
-            get { return song; }
-            private set { song = value; }
-        }
-
-        public string SongPath
-        {
-            get { return songPath; }
-            set { songPath = value; }
-        }
         public Music(string songPath, Song song)
         {
             this.SongPath = songPath;
-            this.SONG = song;
-            LoadContent();
+            this.Song = song;
+            this.LoadContent();
         }
+
+        public Song Song { get; private set; }
+
+        public string SongPath { get; set; }
 
         protected override void LoadContent()
         {
-            SONG = Content.Load<Song>(SongPath);
-            MediaPlayer.Play(SONG);
+            this.Song = Content.Load<Song>(this.SongPath);
+            MediaPlayer.Play(this.Song);
         }
     }
-
 }

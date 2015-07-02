@@ -1,101 +1,95 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.GamerServices;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
-using XRpgLibrary;
-using RPG_Demo1.GameScreens;
-
-using RPG_Demo1.MusicManager;
-
 namespace RPG_Demo1
 {
-    public class Game1 : Microsoft.Xna.Framework.Game
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+    using Microsoft.Xna.Framework.Input;
+
+    using RPG_Demo1.GameScreens;
+
+    using XRpgLibrary;
+
+    public class Game1 : Game
     {
+        #region Screen Field Region
+
+        public readonly Rectangle ScreenRectangle;
+        private const int ScreenWidth = 1024;
+        private const int ScreenHeight = 768;
+
+        #endregion
+
         #region XNA Field Region
 
-        GraphicsDeviceManager graphics;
-        public SpriteBatch spriteBatch;
-        private Vector2 positionVector2=new Vector2(200,200);
+        private GraphicsDeviceManager graphics;
 
         #endregion
 
         #region Game State Region
 
-        GameStateManager stateManager;
-
-        public TitleScreen TitleScreen;
-        public StartMenuScreen StartMenuScreen;
-        public GamePlayScreen GamePlayScreen;
-        public CharacterGenerationScreen CharacterGenerationScreen;
-
-        #endregion
-
-        #region Screen Field Region
-
-        const int screenWidth = 1024;
-        const int screenHeight = 768;
-        public readonly Rectangle ScreenRectangle;
+        private GameStateManager stateManager;
 
         #endregion
 
         public Game1()
         {
-            graphics = new GraphicsDeviceManager(this);
+            this.graphics = new GraphicsDeviceManager(this);
 
-            graphics.PreferredBackBufferWidth = screenWidth;
-            graphics.PreferredBackBufferHeight = screenHeight;
+            this.graphics.PreferredBackBufferWidth = ScreenWidth;
+            this.graphics.PreferredBackBufferHeight = ScreenHeight;
 
-            graphics.IsFullScreen = true;
-            ScreenRectangle = new Rectangle(0, 0, screenWidth, screenHeight);
+            this.graphics.IsFullScreen = true;
+            this.ScreenRectangle = new Rectangle(0, 0, ScreenWidth, ScreenHeight);
 
             Content.RootDirectory = "Content";
             Components.Add(new InputHandler(this));
 
-            stateManager = new GameStateManager(this);
-            Components.Add(stateManager);
+            this.stateManager = new GameStateManager(this);
+            Components.Add(this.stateManager);
 
-            TitleScreen = new TitleScreen(this, stateManager);
-            StartMenuScreen = new GameScreens.StartMenuScreen(this, stateManager);
-            GamePlayScreen = new GamePlayScreen(this, stateManager);
-            CharacterGenerationScreen = new CharacterGenerationScreen(this, stateManager);
+            TitleScreen = new TitleScreen(this, this.stateManager);
+            StartMenuScreen = new GameScreens.StartMenuScreen(this, this.stateManager);
+            GamePlayScreen = new GamePlayScreen(this, this.stateManager);
+            CharacterGenerationScreen = new CharacterGenerationScreen(this, this.stateManager);
 
-            stateManager.ChangeState(TitleScreen);
-        }
-        protected override void Initialize()
-        {
-            base.Initialize();
+            this.stateManager.ChangeState(TitleScreen);
         }
 
-       
+        #region Properties
+
+        public SpriteBatch SpriteBatch { get; protected set; }
+
+        public TitleScreen TitleScreen { get; protected set; }
+
+        public StartMenuScreen StartMenuScreen { get; protected set; }
+
+        public GamePlayScreen GamePlayScreen { get; protected set; }
+
+        public CharacterGenerationScreen CharacterGenerationScreen { get; protected set; }
+
+        #endregion
 
         protected override void LoadContent()
         {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-            
+            SpriteBatch = new SpriteBatch(GraphicsDevice);
         }
+
         protected override void UnloadContent()
         {
-            
         }
+
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            {
                 this.Exit();
-            
+            }
 
             base.Update(gameTime);
         }
+
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-           
-
             base.Draw(gameTime);
         }
     }
